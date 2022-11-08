@@ -6,7 +6,7 @@ Browserslist: caniuse-lite is outdated. Please run:
   npx browserslist@latest --update-db
   Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
 FAIL src/App.test.tsx
-  ✕ renders the course name somewhere (164 ms)
+  ✕ renders the course name somewhere (122 ms)
 
   ● renders the course name somewhere
 
@@ -59,346 +59,333 @@ FAIL src/App.test.tsx
             [36m</div>[39m
           [36m</div>[39m
           [36m<div[39m
-            [33mclass[39m=[32m"container"[39m
-            [33mid[39m=[32m"map"[39m
-            [33mstyle[39m=[32m"width: 1000px; height: 1000px; border: 1px solid gray;"[39m
+            [33mclass[39m=[32m"react-transform-wrapper transform-component-module_wrapper__1_Fgj "[39m
           [36m>[39m
             [36m<div[39m
-              [33mstyle[39m=[32m"width: 100%; height: 100%; display: flex; flex-wrap: wrap;"[39m
+              [33mclass[39m=[32m"react-transform-component transform-component-module_content__2jYgh "[39m
+              [33mstyle[39m=[32m"transform: translate3d(0px, 0px, 0) scale(1);"[39m
             [36m>[39m
               [36m<div[39m
-                [33mclass[39m=[32m"square"[39m
-                [33mstyle[39m=[32m"width: 20%; height: 20%;"[39m
+                [33mid[39m=[32m"map"[39m
+                [33mstyle[39m=[32m"width: 1000px; height: 1000px; border: 1px solid gray;"[39m
               [36m>[39m
                 [36m<div[39m
-                  [33mstyle[39m=[32m"position: relative; width: 100%; height: 100%; border: 1px solid gray;"[39m
+                  [33mstyle[39m=[32m"width: 100%; height: 100%; display: flex; flex-wrap: wrap;"[39m
                 [36m>[39m
                   [36m<div[39m
-                    [33mstyle[39m=[32m"background-color: white; color: black; width: 100%; height: 100%;"[39m
+                    [33mclass[39m=[32m"square"[39m
+                    [33mstyle[39m=[32m"width: 20%; height: 20%;"[39m
                   [36m>[39m
                     [36m<div[39m
-                      [33mdraggable[39m=[32m"true"[39m
-                      [33mstyle[39m=[32m"opacity: 1; font-size: 50px; font-weight: bold; cursor: move; text-align: center;"[39m
+                      [33mstyle[39m=[32m"position: relative; width: 100%; height: 100%; border: 1px solid gray;"[39m
                     [36m>[39m
-                      [36m<img[39m
-                        [33mheight[39m=[32m"100%"[39m
-                        [33msrc[39m=[32m"bosun_tally.jpg"[39m
-                        [33mwidth[39m=[32m"100%"[39m
+                      [36m<div[39m
+                        [33mstyle[39m=[32m"background-color: white; color: black; width: 100%; height: 100%;"[39m
+                      [36m>[39m
+                        [36m<div[39m
+                          [33mdraggable[39m=[32m"true"[39m
+                          [33mstyle[39m=[32m"opacity: 1; font-size: 50px; font-weight: bold; cursor: move; text-align: center;"[39m
+                        [36m>[39m
+                          [36m<img[39m
+                            [33mheight[39m=[32m"100%"[39m
+                            [33msrc[39m=[32m"bosun_tally.jpg"[39m
+                            [33mwidth[39m=[32m"100%"[39m
+                          [36m/>[39m
+                        [36m</div>[39m
+                      [36m</div>[39m
+                    [36m</div>[39m
+                  [36m</div>[39m
+                  [36m<div[39m
+                    [33mclass[39m=[32m"square"[39m
+                    [33mstyle[39m=[32m"width: 20%; height: 20%;"[39m
+                  [36m>[39m
+                    [36m<div[39m
+                      [33mstyle[39m=[32m"position: relative; width: 100%; height: 100%; border: 1px solid gray;"[39m
+                    [36m>[39m
+                      [36m<div[39m
+                        [33mstyle[39m=[32m"background-color: white; color: black; width: 100%; height: 100%;"[39m
+                      [36m/>[39m
+                    [36m</div>[39m
+                  [36m</div>[39m
+                  [36m<div[39m
+                    [33mclass[39m=[32m"square"[39m
+                    [33mstyle[39m=[32m"width: 20%; height: 20%;"[39m
+                  [36m>[39m
+                    [36m<div[39m
+                      [33mstyle[39m=[32m"position: relative; width: 100%; height: 100%; border: 1px solid gray;"[39m
+                    [36m>[39m
+                      [36m<div[39m
+                        [33mstyle[39m=[32m"background-color: white; color: black; width: 100%; height: 100%;"[39m
+                      [36m/>[39m
+                    [36m</div>[39m
+                  [36m</div>[39m
+                  [36m<div[39m
+                    [33mclass[39m=[32m"square"[39m
+                    [33mstyle[39m=[32m"width: 20%; height: 20%;"[39m
+                  [36m>[39m
+                    [36m<div[39m
+                      [33mstyle[39m=[32m"position: relative; width: 100%; height: 100%; border: 1px solid gray;"[39m
+                    [36m>[39m
+                      [36m<div[39m
+                        [33mstyle[39m=[32m"background-color: white; color: black; width: 100%; height: 100%;"[39m
+                      [36m/>[39m
+                    [36m</div>[39m
+                  [36m</div>[39m
+                  [36m<div[39m
+                    [33mclass[39m=[32m"square"[39m
+                    [33mstyle[39m=[32m"width: 20%; height: 20%;"[39m
+                  [36m>[39m
+                    [36m<div[39m
+                      [33mstyle[39m=[32m"position: relative; width: 100%; height: 100%; border: 1px solid gray;"[39m
+                    [36m>[39m
+                      [36m<div[39m
+                        [33mstyle[39m=[32m"background-color: white; color: black; width: 100%; height: 100%;"[39m
+                      [36m/>[39m
+                    [36m</div>[39m
+                  [36m</div>[39m
+                  [36m<div[39m
+                    [33mclass[39m=[32m"square"[39m
+                    [33mstyle[39m=[32m"width: 20%; height: 20%;"[39m
+                  [36m>[39m
+                    [36m<div[39m
+                      [33mstyle[39m=[32m"position: relative; width: 100%; height: 100%; border: 1px solid gray;"[39m
+                    [36m>[39m
+                      [36m<div[39m
+                        [33mstyle[39m=[32m"background-color: white; color: black; width: 100%; height: 100%;"[39m
+                      [36m/>[39m
+                    [36m</div>[39m
+                  [36m</div>[39m
+                  [36m<div[39m
+                    [33mclass[39m=[32m"square"[39m
+                    [33mstyle[39m=[32m"width: 20%; height: 20%;"[39m
+                  [36m>[39m
+                    [36m<div[39m
+                      [33mstyle[39m=[32m"position: relative; width: 100%; height: 100%; border: 1px solid gray;"[39m
+                    [36m>[39m
+                      [36m<div[39m
+                        [33mstyle[39m=[32m"background-color: white; color: black; width: 100%; height: 100%;"[39m
+                      [36m/>[39m
+                    [36m</div>[39m
+                  [36m</div>[39m
+                  [36m<div[39m
+                    [33mclass[39m=[32m"square"[39m
+                    [33mstyle[39m=[32m"width: 20%; height: 20%;"[39m
+                  [36m>[39m
+                    [36m<div[39m
+                      [33mstyle[39m=[32m"position: relative; width: 100%; height: 100%; border: 1px solid gray;"[39m
+                    [36m>[39m
+                      [36m<div[39m
+                        [33mstyle[39m=[32m"background-color: white; color: black; width: 100%; height: 100%;"[39m
+                      [36m/>[39m
+                    [36m</div>[39m
+                  [36m</div>[39m
+                  [36m<div[39m
+                    [33mclass[39m=[32m"square"[39m
+                    [33mstyle[39m=[32m"width: 20%; height: 20%;"[39m
+                  [36m>[39m
+                    [36m<div[39m
+                      [33mstyle[39m=[32m"position: relative; width: 100%; height: 100%; border: 1px solid gray;"[39m
+                    [36m>[39m
+                      [36m<div[39m
+                        [33mstyle[39m=[32m"background-color: white; color: black; width: 100%; height: 100%;"[39m
+                      [36m/>[39m
+                    [36m</div>[39m
+                  [36m</div>[39m
+                  [36m<div[39m
+                    [33mclass[39m=[32m"square"[39m
+                    [33mstyle[39m=[32m"width: 20%; height: 20%;"[39m
+                  [36m>[39m
+                    [36m<div[39m
+                      [33mstyle[39m=[32m"position: relative; width: 100%; height: 100%; border: 1px solid gray;"[39m
+                    [36m>[39m
+                      [36m<div[39m
+                        [33mstyle[39m=[32m"background-color: white; color: black; width: 100%; height: 100%;"[39m
+                      [36m/>[39m
+                    [36m</div>[39m
+                  [36m</div>[39m
+                  [36m<div[39m
+                    [33mclass[39m=[32m"square"[39m
+                    [33mstyle[39m=[32m"width: 20%; height: 20%;"[39m
+                  [36m>[39m
+                    [36m<div[39m
+                      [33mstyle[39m=[32m"position: relative; width: 100%; height: 100%; border: 1px solid gray;"[39m
+                    [36m>[39m
+                      [36m<div[39m
+                        [33mstyle[39m=[32m"background-color: white; color: black; width: 100%; height: 100%;"[39m
+                      [36m/>[39m
+                    [36m</div>[39m
+                  [36m</div>[39m
+                  [36m<div[39m
+                    [33mclass[39m=[32m"square"[39m
+                    [33mstyle[39m=[32m"width: 20%; height: 20%;"[39m
+                  [36m>[39m
+                    [36m<div[39m
+                      [33mstyle[39m=[32m"position: relative; width: 100%; height: 100%; border: 1px solid gray;"[39m
+                    [36m>[39m
+                      [36m<div[39m
+                        [33mstyle[39m=[32m"background-color: white; color: black; width: 100%; height: 100%;"[39m
+                      [36m/>[39m
+                    [36m</div>[39m
+                  [36m</div>[39m
+                  [36m<div[39m
+                    [33mclass[39m=[32m"square"[39m
+                    [33mstyle[39m=[32m"width: 20%; height: 20%;"[39m
+                  [36m>[39m
+                    [36m<div[39m
+                      [33mstyle[39m=[32m"position: relative; width: 100%; height: 100%; border: 1px solid gray;"[39m
+                    [36m>[39m
+                      [36m<div[39m
+                        [33mstyle[39m=[32m"background-color: white; color: black; width: 100%; height: 100%;"[39m
+                      [36m/>[39m
+                    [36m</div>[39m
+                  [36m</div>[39m
+                  [36m<div[39m
+                    [33mclass[39m=[32m"square"[39m
+                    [33mstyle[39m=[32m"width: 20%; height: 20%;"[39m
+                  [36m>[39m
+                    [36m<div[39m
+                      [33mstyle[39m=[32m"position: relative; width: 100%; height: 100%; border: 1px solid gray;"[39m
+                    [36m>[39m
+                      [36m<div[39m
+                        [33mstyle[39m=[32m"background-color: white; color: black; width: 100%; height: 100%;"[39m
+                      [36m/>[39m
+                    [36m</div>[39m
+                  [36m</div>[39m
+                  [36m<div[39m
+                    [33mclass[39m=[32m"square"[39m
+                    [33mstyle[39m=[32m"width: 20%; height: 20%;"[39m
+                  [36m>[39m
+                    [36m<div[39m
+                      [33mstyle[39m=[32m"position: relative; width: 100%; height: 100%; border: 1px solid gray;"[39m
+                    [36m>[39m
+                      [36m<div[39m
+                        [33mstyle[39m=[32m"background-color: white; color: black; width: 100%; height: 100%;"[39m
+                      [36m/>[39m
+                    [36m</div>[39m
+                  [36m</div>[39m
+                  [36m<div[39m
+                    [33mclass[39m=[32m"square"[39m
+                    [33mstyle[39m=[32m"width: 20%; height: 20%;"[39m
+                  [36m>[39m
+                    [36m<div[39m
+                      [33mstyle[39m=[32m"position: relative; width: 100%; height: 100%; border: 1px solid gray;"[39m
+                    [36m>[39m
+                      [36m<div[39m
+                        [33mstyle[39m=[32m"background-color: white; color: black; width: 100%; height: 100%;"[39m
+                      [36m/>[39m
+                    [36m</div>[39m
+                  [36m</div>[39m
+                  [36m<div[39m
+                    [33mclass[39m=[32m"square"[39m
+                    [33mstyle[39m=[32m"width: 20%; height: 20%;"[39m
+                  [36m>[39m
+                    [36m<div[39m
+                      [33mstyle[39m=[32m"position: relative; width: 100%; height: 100%; border: 1px solid gray;"[39m
+                    [36m>[39m
+                      [36m<div[39m
+                        [33mstyle[39m=[32m"background-color: white; color: black; width: 100%; height: 100%;"[39m
+                      [36m/>[39m
+                    [36m</div>[39m
+                  [36m</div>[39m
+                  [36m<div[39m
+                    [33mclass[39m=[32m"square"[39m
+                    [33mstyle[39m=[32m"width: 20%; height: 20%;"[39m
+                  [36m>[39m
+                    [36m<div[39m
+                      [33mstyle[39m=[32m"position: relative; width: 100%; height: 100%; border: 1px solid gray;"[39m
+                    [36m>[39m
+                      [36m<div[39m
+                        [33mstyle[39m=[32m"background-color: white; color: black; width: 100%; height: 100%;"[39m
+                      [36m/>[39m
+                    [36m</div>[39m
+                  [36m</div>[39m
+                  [36m<div[39m
+                    [33mclass[39m=[32m"square"[39m
+                    [33mstyle[39m=[32m"width: 20%; height: 20%;"[39m
+                  [36m>[39m
+                    [36m<div[39m
+                      [33mstyle[39m=[32m"position: relative; width: 100%; height: 100%; border: 1px solid gray;"[39m
+                    [36m>[39m
+                      [36m<div[39m
+                        [33mstyle[39m=[32m"background-color: white; color: black; width: 100%; height: 100%;"[39m
+                      [36m/>[39m
+                    [36m</div>[39m
+                  [36m</div>[39m
+                  [36m<div[39m
+                    [33mclass[39m=[32m"square"[39m
+                    [33mstyle[39m=[32m"width: 20%; height: 20%;"[39m
+                  [36m>[39m
+                    [36m<div[39m
+                      [33mstyle[39m=[32m"position: relative; width: 100%; height: 100%; border: 1px solid gray;"[39m
+                    [36m>[39m
+                      [36m<div[39m
+                        [33mstyle[39m=[32m"background-color: white; color: black; width: 100%; height: 100%;"[39m
+                      [36m/>[39m
+                    [36m</div>[39m
+                  [36m</div>[39m
+                  [36m<div[39m
+                    [33mclass[39m=[32m"square"[39m
+                    [33mstyle[39m=[32m"width: 20%; height: 20%;"[39m
+                  [36m>[39m
+                    [36m<div[39m
+                      [33mstyle[39m=[32m"position: relative; width: 100%; height: 100%; border: 1px solid gray;"[39m
+                    [36m>[39m
+                      [36m<div[39m
+                        [33mstyle[39m=[32m"background-color: white; color: black; width: 100%; height: 100%;"[39m
+                      [36m/>[39m
+                    [36m</div>[39m
+                  [36m</div>[39m
+                  [36m<div[39m
+                    [33mclass[39m=[32m"square"[39m
+                    [33mstyle[39m=[32m"width: 20%; height: 20%;"[39m
+                  [36m>[39m
+                    [36m<div[39m
+                      [33mstyle[39m=[32m"position: relative; width: 100%; height: 100%; border: 1px solid gray;"[39m
+                    [36m>[39m
+                      [36m<div[39m
+                        [33mstyle[39m=[32m"background-color: white; color: black; width: 100%; height: 100%;"[39m
+                      [36m/>[39m
+                    [36m</div>[39m
+                  [36m</div>[39m
+                  [36m<div[39m
+                    [33mclass[39m=[32m"square"[39m
+                    [33mstyle[39m=[32m"width: 20%; height: 20%;"[39m
+                  [36m>[39m
+                    [36m<div[39m
+                      [33mstyle[39m=[32m"position: relative; width: 100%; height: 100%; border: 1px solid gray;"[39m
+                    [36m>[39m
+                      [36m<div[39m
+                        [33mstyle[39m=[32m"background-color: white; color: black; width: 100%; height: 100%;"[39m
+                      [36m/>[39m
+                    [36m</div>[39m
+                  [36m</div>[39m
+                  [36m<div[39m
+                    [33mclass[39m=[32m"square"[39m
+                    [33mstyle[39m=[32m"width: 20%; height: 20%;"[39m
+                  [36m>[39m
+                    [36m<div[39m
+                      [33mstyle[39m=[32m"position: relative; width: 100%; height: 100%; border: 1px solid gray;"[39m
+                    [36m>[39m
+                      [36m<div[39m
+                        [33mstyle[39m=[32m"background-color: white; color: black; width: 100%; height: 100%;"[39m
+                      [36m/>[39m
+                    [36m</div>[39m
+                  [36m</div>[39m
+                  [36m<div[39m
+                    [33mclass[39m=[32m"square"[39m
+                    [33mstyle[39m=[32m"width: 20%; height: 20%;"[39m
+                  [36m>[39m
+                    [36m<div[39m
+                      [33mstyle[39m=[32m"position: relative; width: 100%; height: 100%; border: 1px solid gray;"[39m
+                    [36m>[39m
+                      [36m<div[39m
+                        [33mstyle[39m=[32m"background-color: white; color: black; width: 100%; height: 100%;"[39m
                       [36m/>[39m
                     [36m</div>[39m
                   [36m</div>[39m
                 [36m</div>[39m
               [36m</div>[39m
-              [36m<div[39m
-                [33mclass[39m=[32m"square"[39m
-                [33mstyle[39m=[32m"width: 20%; height: 20%;"[39m
-              [36m>[39m
-                [36m<div[39m
-                  [33mstyle[39m=[32m"position: relative; width: 100%; height: 100%; border: 1px solid gray;"[39m
-                [36m>[39m
-                  [36m<div[39m
-                    [33mstyle[39m=[32m"background-color: white; color: black; width: 100%; height: 100%;"[39m
-                  [36m/>[39m
-                [36m</div>[39m
-              [36m</div>[39m
-              [36m<div[39m
-                [33mclass[39m=[32m"square"[39m
-                [33mstyle[39m=[32m"width: 20%; height: 20%;"[39m
-              [36m>[39m
-                [36m<div[39m
-                  [33mstyle[39m=[32m"position: relative; width: 100%; height: 100%; border: 1px solid gray;"[39m
-                [36m>[39m
-                  [36m<div[39m
-                    [33mstyle[39m=[32m"background-color: white; color: black; width: 100%; height: 100%;"[39m
-                  [36m/>[39m
-                [36m</div>[39m
-              [36m</div>[39m
-              [36m<div[39m
-                [33mclass[39m=[32m"square"[39m
-                [33mstyle[39m=[32m"width: 20%; height: 20%;"[39m
-              [36m>[39m
-                [36m<div[39m
-                  [33mstyle[39m=[32m"position: relative; width: 100%; height: 100%; border: 1px solid gray;"[39m
-                [36m>[39m
-                  [36m<div[39m
-                    [33mstyle[39m=[32m"background-color: white; color: black; width: 100%; height: 100%;"[39m
-                  [36m/>[39m
-                [36m</div>[39m
-              [36m</div>[39m
-              [36m<div[39m
-                [33mclass[39m=[32m"square"[39m
-                [33mstyle[39m=[32m"width: 20%; height: 20%;"[39m
-              [36m>[39m
-                [36m<div[39m
-                  [33mstyle[39m=[32m"position: relative; width: 100%; height: 100%; border: 1px solid gray;"[39m
-                [36m>[39m
-                  [36m<div[39m
-                    [33mstyle[39m=[32m"background-color: white; color: black; width: 100%; height: 100%;"[39m
-                  [36m/>[39m
-                [36m</div>[39m
-              [36m</div>[39m
-              [36m<div[39m
-                [33mclass[39m=[32m"square"[39m
-                [33mstyle[39m=[32m"width: 20%; height: 20%;"[39m
-              [36m>[39m
-                [36m<div[39m
-                  [33mstyle[39m=[32m"position: relative; width: 100%; height: 100%; border: 1px solid gray;"[39m
-                [36m>[39m
-                  [36m<div[39m
-                    [33mstyle[39m=[32m"background-color: white; color: black; width: 100%; height: 100%;"[39m
-                  [36m/>[39m
-                [36m</div>[39m
-              [36m</div>[39m
-              [36m<div[39m
-                [33mclass[39m=[32m"square"[39m
-                [33mstyle[39m=[32m"width: 20%; height: 20%;"[39m
-              [36m>[39m
-                [36m<div[39m
-                  [33mstyle[39m=[32m"position: relative; width: 100%; height: 100%; border: 1px solid gray;"[39m
-                [36m>[39m
-                  [36m<div[39m
-                    [33mstyle[39m=[32m"background-color: white; color: black; width: 100%; height: 100%;"[39m
-                  [36m/>[39m
-                [36m</div>[39m
-              [36m</div>[39m
-              [36m<div[39m
-                [33mclass[39m=[32m"square"[39m
-                [33mstyle[39m=[32m"width: 20%; height: 20%;"[39m
-              [36m>[39m
-                [36m<div[39m
-                  [33mstyle[39m=[32m"position: relative; width: 100%; height: 100%; border: 1px solid gray;"[39m
-                [36m>[39m
-                  [36m<div[39m
-                    [33mstyle[39m=[32m"background-color: white; color: black; width: 100%; height: 100%;"[39m
-                  [36m/>[39m
-                [36m</div>[39m
-              [36m</div>[39m
-              [36m<div[39m
-                [33mclass[39m=[32m"square"[39m
-                [33mstyle[39m=[32m"width: 20%; height: 20%;"[39m
-              [36m>[39m
-                [36m<div[39m
-                  [33mstyle[39m=[32m"position: relative; width: 100%; height: 100%; border: 1px solid gray;"[39m
-                [36m>[39m
-                  [36m<div[39m
-                    [33mstyle[39m=[32m"background-color: white; color: black; width: 100%; height: 100%;"[39m
-                  [36m/>[39m
-                [36m</div>[39m
-              [36m</div>[39m
-              [36m<div[39m
-                [33mclass[39m=[32m"square"[39m
-                [33mstyle[39m=[32m"width: 20%; height: 20%;"[39m
-              [36m>[39m
-                [36m<div[39m
-                  [33mstyle[39m=[32m"position: relative; width: 100%; height: 100%; border: 1px solid gray;"[39m
-                [36m>[39m
-                  [36m<div[39m
-                    [33mstyle[39m=[32m"background-color: white; color: black; width: 100%; height: 100%;"[39m
-                  [36m/>[39m
-                [36m</div>[39m
-              [36m</div>[39m
-              [36m<div[39m
-                [33mclass[39m=[32m"square"[39m
-                [33mstyle[39m=[32m"width: 20%; height: 20%;"[39m
-              [36m>[39m
-                [36m<div[39m
-                  [33mstyle[39m=[32m"position: relative; width: 100%; height: 100%; border: 1px solid gray;"[39m
-                [36m>[39m
-                  [36m<div[39m
-                    [33mstyle[39m=[32m"background-color: white; color: black; width: 100%; height: 100%;"[39m
-                  [36m/>[39m
-                [36m</div>[39m
-              [36m</div>[39m
-              [36m<div[39m
-                [33mclass[39m=[32m"square"[39m
-                [33mstyle[39m=[32m"width: 20%; height: 20%;"[39m
-              [36m>[39m
-                [36m<div[39m
-                  [33mstyle[39m=[32m"position: relative; width: 100%; height: 100%; border: 1px solid gray;"[39m
-                [36m>[39m
-                  [36m<div[39m
-                    [33mstyle[39m=[32m"background-color: white; color: black; width: 100%; height: 100%;"[39m
-                  [36m/>[39m
-                [36m</div>[39m
-              [36m</div>[39m
-              [36m<div[39m
-                [33mclass[39m=[32m"square"[39m
-                [33mstyle[39m=[32m"width: 20%; height: 20%;"[39m
-              [36m>[39m
-                [36m<div[39m
-                  [33mstyle[39m=[32m"position: relative; width: 100%; height: 100%; border: 1px solid gray;"[39m
-                [36m>[39m
-                  [36m<div[39m
-                    [33mstyle[39m=[32m"background-color: white; color: black; width: 100%; height: 100%;"[39m
-                  [36m/>[39m
-                [36m</div>[39m
-              [36m</div>[39m
-              [36m<div[39m
-                [33mclass[39m=[32m"square"[39m
-                [33mstyle[39m=[32m"width: 20%; height: 20%;"[39m
-              [36m>[39m
-                [36m<div[39m
-                  [33mstyle[39m=[32m"position: relative; width: 100%; height: 100%; border: 1px solid gray;"[39m
-                [36m>[39m
-                  [36m<div[39m
-                    [33mstyle[39m=[32m"background-color: white; color: black; width: 100%; height: 100%;"[39m
-                  [36m/>[39m
-                [36m</div>[39m
-              [36m</div>[39m
-              [36m<div[39m
-                [33mclass[39m=[32m"square"[39m
-                [33mstyle[39m=[32m"width: 20%; height: 20%;"[39m
-              [36m>[39m
-                [36m<div[39m
-                  [33mstyle[39m=[32m"position: relative; width: 100%; height: 100%; border: 1px solid gray;"[39m
-                [36m>[39m
-                  [36m<div[39m
-                    [33mstyle[39m=[32m"background-color: white; color: black; width: 100%; height: 100%;"[39m
-                  [36m/>[39m
-                [36m</div>[39m
-              [36m</div>[39m
-              [36m<div[39m
-                [33mclass[39m=[32m"square"[39m
-                [33mstyle[39m=[32m"width: 20%; height: 20%;"[39m
-              [36m>[39m
-                [36m<div[39m
-                  [33mstyle[39m=[32m"position: relative; width: 100%; height: 100%; border: 1px solid gray;"[39m
-                [36m>[39m
-                  [36m<div[39m
-                    [33mstyle[39m=[32m"background-color: white; color: black; width: 100%; height: 100%;"[39m
-                  [36m/>[39m
-                [36m</div>[39m
-              [36m</div>[39m
-              [36m<div[39m
-                [33mclass[39m=[32m"square"[39m
-                [33mstyle[39m=[32m"width: 20%; height: 20%;"[39m
-              [36m>[39m
-                [36m<div[39m
-                  [33mstyle[39m=[32m"position: relative; width: 100%; height: 100%; border: 1px solid gray;"[39m
-                [36m>[39m
-                  [36m<div[39m
-                    [33mstyle[39m=[32m"background-color: white; color: black; width: 100%; height: 100%;"[39m
-                  [36m/>[39m
-                [36m</div>[39m
-              [36m</div>[39m
-              [36m<div[39m
-                [33mclass[39m=[32m"square"[39m
-                [33mstyle[39m=[32m"width: 20%; height: 20%;"[39m
-              [36m>[39m
-                [36m<div[39m
-                  [33mstyle[39m=[32m"position: relative; width: 100%; height: 100%; border: 1px solid gray;"[39m
-                [36m>[39m
-                  [36m<div[39m
-                    [33mstyle[39m=[32m"background-color: white; color: black; width: 100%; height: 100%;"[39m
-                  [36m/>[39m
-                [36m</div>[39m
-              [36m</div>[39m
-              [36m<div[39m
-                [33mclass[39m=[32m"square"[39m
-                [33mstyle[39m=[32m"width: 20%; height: 20%;"[39m
-              [36m>[39m
-                [36m<div[39m
-                  [33mstyle[39m=[32m"position: relative; width: 100%; height: 100%; border: 1px solid gray;"[39m
-                [36m>[39m
-                  [36m<div[39m
-                    [33mstyle[39m=[32m"background-color: white; color: black; width: 100%; height: 100%;"[39m
-                  [36m/>[39m
-                [36m</div>[39m
-              [36m</div>[39m
-              [36m<div[39m
-                [33mclass[39m=[32m"square"[39m
-                [33mstyle[39m=[32m"width: 20%; height: 20%;"[39m
-              [36m>[39m
-                [36m<div[39m
-                  [33mstyle[39m=[32m"position: relative; width: 100%; height: 100%; border: 1px solid gray;"[39m
-                [36m>[39m
-                  [36m<div[39m
-                    [33mstyle[39m=[32m"background-color: white; color: black; width: 100%; height: 100%;"[39m
-                  [36m/>[39m
-                [36m</div>[39m
-              [36m</div>[39m
-              [36m<div[39m
-                [33mclass[39m=[32m"square"[39m
-                [33mstyle[39m=[32m"width: 20%; height: 20%;"[39m
-              [36m>[39m
-                [36m<div[39m
-                  [33mstyle[39m=[32m"position: relative; width: 100%; height: 100%; border: 1px solid gray;"[39m
-                [36m>[39m
-                  [36m<div[39m
-                    [33mstyle[39m=[32m"background-color: white; color: black; width: 100%; height: 100%;"[39m
-                  [36m/>[39m
-                [36m</div>[39m
-              [36m</div>[39m
-              [36m<div[39m
-                [33mclass[39m=[32m"square"[39m
-                [33mstyle[39m=[32m"width: 20%; height: 20%;"[39m
-              [36m>[39m
-                [36m<div[39m
-                  [33mstyle[39m=[32m"position: relative; width: 100%; height: 100%; border: 1px solid gray;"[39m
-                [36m>[39m
-                  [36m<div[39m
-                    [33mstyle[39m=[32m"background-color: white; color: black; width: 100%; height: 100%;"[39m
-                  [36m/>[39m
-                [36m</div>[39m
-              [36m</div>[39m
-              [36m<div[39m
-                [33mclass[39m=[32m"square"[39m
-                [33mstyle[39m=[32m"width: 20%; height: 20%;"[39m
-              [36m>[39m
-                [36m<div[39m
-                  [33mstyle[39m=[32m"position: relative; width: 100%; height: 100%; border: 1px solid gray;"[39m
-                [36m>[39m
-                  [36m<div[39m
-                    [33mstyle[39m=[32m"background-color: white; color: black; width: 100%; height: 100%;"[39m
-                  [36m/>[39m
-                [36m</div>[39m
-              [36m</div>[39m
-              [36m<div[39m
-                [33mclass[39m=[32m"square"[39m
-                [33mstyle[39m=[32m"width: 20%; height: 20%;"[39m
-              [36m>[39m
-                [36m<div[39m
-                  [33mstyle[39m=[32m"position: relative; width: 100%; height: 100%; border: 1px solid gray;"[39m
-                [36m>[39m
-                  [36m<div[39m
-                    [33mstyle[39m=[32m"background-color: white; color: black; width: 100%; height: 100%;"[39m
-                  [36m/>[39m
-                [36m</div>[39m
-              [36m</div>[39m
-              [36m<div[39m
-                [33mclass[39m=[32m"square"[39m
-                [33mstyle[39m=[32m"width: 20%; height: 20%;"[39m
-              [36m>[39m
-                [36m<div[39m
-                  [33mstyle[39m=[32m"position: relative; width: 100%; height: 100%; border: 1px solid gray;"[39m
-                [36m>[39m
-                  [36m<div[39m
-                    [33mstyle[39m=[32m"background-color: white; color: black; width: 100%; height: 100%;"[39m
-                  [36m/>[39m
-                [36m</div>[39m
-              [36m</div>[39m
             [36m</div>[39m
-          [36m</div>[39m
-          [36m<div>[39m
-            [0mcolor[0m
-          [36m</div>[39m
-          [36m<div>[39m
-            [0mOrientation[0m
-          [36m</div>[39m
-          [36m<div>[39m
-            [0mposition[0m
-          [36m</div>[39m
-          [36m<div>[39m
-            [0msize[0m
-          [36m</div>[39m
-          [36m<div>[39m
-            [0mtages[0m
-          [36m</div>[39m
-          [36m<div>[39m
-            [0mtxture[0m
-          [36m</div>[39m
-          [36m<div>[39m
-            [0mtype[0m
           [36m</div>[39m
         [36m</div>[39m
       [36m</div>[39m
@@ -422,32 +409,32 @@ FAIL src/App.test.tsx
       at _run10000 (node_modules/@jest/core/build/cli/index.js:320:7)
       at runCLI (node_modules/@jest/core/build/cli/index.js:173:3)
 
---------------------|---------|----------|---------|---------|--------------------
-File                | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s  
---------------------|---------|----------|---------|---------|--------------------
-All files           |   67.46 |    40.74 |   52.94 |   68.35 |                    
- src                |   64.47 |    40.74 |   40.74 |   65.27 |                    
-  App.tsx           |      75 |      100 |   33.33 |     100 |                    
-  Board.tsx         |   88.88 |      100 |      75 |    87.5 | 44-45              
-  BoardSquare.tsx   |      75 |    44.44 |      50 |      75 | 18-19              
-  GridEdit.tsx      |      50 |      100 |   33.33 |      50 | 12-16              
-  ImageDownload.tsx |      30 |        0 |      20 |      30 | 7-12,24            
-  Overlay.tsx       |      50 |      100 |       0 |      50 | 8                  
-  Pic.tsx           |     100 |       50 |     100 |     100 | 18                 
-  Square.tsx        |     100 |       50 |     100 |     100 | 8-9                
-  constants.ts      |     100 |      100 |     100 |     100 |                    
-  game.ts           |   35.29 |        0 |       0 |   35.29 | 5,9-14,18-19,23-27 
- src/components     |     100 |      100 |     100 |     100 |                    
-  color.tsx         |     100 |      100 |     100 |     100 |                    
-  orientation.tsx   |     100 |      100 |     100 |     100 |                    
-  position.tsx      |     100 |      100 |     100 |     100 |                    
-  size.tsx          |     100 |      100 |     100 |     100 |                    
-  tages.tsx         |     100 |      100 |     100 |     100 |                    
-  texture.tsx       |     100 |      100 |     100 |     100 |                    
-  type.tsx          |     100 |      100 |     100 |     100 |                    
---------------------|---------|----------|---------|---------|--------------------
+--------------------|---------|----------|---------|---------|-------------------
+File                | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
+--------------------|---------|----------|---------|---------|-------------------
+All files           |      60 |    35.29 |   33.33 |   60.56 |                   
+ src                |   66.17 |    35.29 |    42.3 |   67.18 |                   
+  App.tsx           |      75 |      100 |   33.33 |     100 |                   
+  Board.tsx         |   88.88 |      100 |      75 |    87.5 | 44-45             
+  BoardSquare.tsx   |   71.42 |    33.33 |      50 |   71.42 | 17-18             
+  GridEdit.tsx      |      50 |      100 |   33.33 |      50 | 12-16             
+  ImageDownload.tsx |      30 |        0 |      20 |      30 | 7-12,24           
+  Overlay.tsx       |      50 |      100 |       0 |      50 | 8                 
+  Pic.tsx           |     100 |       50 |     100 |     100 | 18                
+  Square.tsx        |     100 |      100 |     100 |     100 |                   
+  constants.ts      |     100 |      100 |     100 |     100 |                   
+  game.ts           |   41.66 |        0 |       0 |   41.66 | 5,9-14,18-19      
+ src/components     |       0 |      100 |       0 |       0 |                   
+  color.tsx         |       0 |      100 |       0 |       0 | 6                 
+  orientation.tsx   |       0 |      100 |       0 |       0 | 6                 
+  position.tsx      |       0 |      100 |       0 |       0 | 6                 
+  size.tsx          |       0 |      100 |       0 |       0 | 6                 
+  tages.tsx         |       0 |      100 |       0 |       0 | 6                 
+  texture.tsx       |       0 |      100 |       0 |       0 | 6                 
+  type.tsx          |       0 |      100 |       0 |       0 | 6                 
+--------------------|---------|----------|---------|---------|-------------------
 Test Suites: 1 failed, 1 total
 Tests:       1 failed, 1 total
 Snapshots:   0 total
-Time:        3.549 s
+Time:        2.555 s
 Ran all test suites.
