@@ -1,16 +1,43 @@
 {
   "files": {
     "main.css": "/final-project-start/static/css/main.846dc9ac.css",
-    "main.js": "/final-project-start/static/js/main.b62dac4d.js",
+    "main.js": "/final-project-start/static/js/main.f3037731.js",
     "static/js/787.4ef7427d.chunk.js": "/final-project-start/static/js/787.4ef7427d.chunk.js",
+    "static/media/floor.jpg": "/final-project-start/static/media/floor.c37b6e4b7f73e1456479.jpg",
+    "static/media/stone.jpg": "/final-project-start/static/media/stone.cbca09a9c6116b6fa95e.jpg",
+    "static/media/tree.jpg": "/final-project-start/static/media/tree.e6ca4c7b06eebff06f0c.jpg",
+    "static/media/pizza.jpg": "/final-project-start/static/media/pizza.4b2e128545cdfae984d6.jpg",
+    "static/media/hugeStone.jpg": "/final-project-start/static/media/hugeStone.dc03fd870e1dc4f1dc26.jpg",
+    "static/media/Chrysanthemum.jpg": "/final-project-start/static/media/Chrysanthemum.eeb0a17956746a7b55ca.jpg",
+    "static/media/cat.jpg": "/final-project-start/static/media/cat.ad1af3a9f81b98bb26e0.jpg",
+    "static/media/grass.jpg": "/final-project-start/static/media/grass.056f12b3bbd7eb1922b1.jpg",
+    "static/media/path.jpg": "/final-project-start/static/media/path.ef6aa0ab970661437377.jpg",
+    "static/media/table.jpg": "/final-project-start/static/media/table.6d02f85920a681bd55e5.jpg",
+    "static/media/greenTree.jpg": "/final-project-start/static/media/greenTree.157cab2dd775f652d8c1.jpg",
+    "static/media/goldCoin.jpg": "/final-project-start/static/media/goldCoin.8e51ff77f383e40d4957.jpg",
+    "static/media/topPath.jpg": "/final-project-start/static/media/topPath.ed65bbae0dd88bf0e3e1.jpg",
+    "static/media/chest.jpg": "/final-project-start/static/media/chest.a295a4caae3b6584dbe4.jpg",
+    "static/media/bushes.jpg": "/final-project-start/static/media/bushes.beac58e9b6f28bd10268.jpg",
+    "static/media/redFlowers.jpg": "/final-project-start/static/media/redFlowers.3c7dddd35a786a31a560.jpg",
+    "static/media/barrel.jpg": "/final-project-start/static/media/barrel.62aee7efd54f052b88b8.jpg",
+    "static/media/paper.jpg": "/final-project-start/static/media/paper.0a39726f49c002324104.jpg",
+    "static/media/woodFloor.jpg": "/final-project-start/static/media/woodFloor.7a77d9be58594ea2f622.jpg",
     "static/media/bosun_tally.jpg": "/final-project-start/static/media/bosun_tally.efd13eb681079a6cc65d.jpg",
+    "static/media/dog.jpg": "/final-project-start/static/media/dog.efd13eb681079a6cc65d.jpg",
+    "static/media/pasta.jpg": "/final-project-start/static/media/pasta.3f469f2a37d731488191.jpg",
+    "static/media/candle.jpg": "/final-project-start/static/media/candle.ebf9afac83669c32c3b1.jpg",
+    "static/media/cracks.jpg": "/final-project-start/static/media/cracks.b52e9c691f4ad9fef530.jpg",
+    "static/media/flag.jpg": "/final-project-start/static/media/flag.c0377f93f6fb457bdf5a.jpg",
+    "static/media/pen.jpg": "/final-project-start/static/media/pen.e7c877e8995c353fbb29.jpg",
+    "static/media/crate.jpg": "/final-project-start/static/media/crate.6775bfbe9fd00b60f419.jpg",
+    "static/media/chair.jpg": "/final-project-start/static/media/chair.8db81b5da334a7839ba7.jpg",
     "index.html": "/final-project-start/index.html",
     "main.846dc9ac.css.map": "/final-project-start/static/css/main.846dc9ac.css.map",
-    "main.b62dac4d.js.map": "/final-project-start/static/js/main.b62dac4d.js.map",
+    "main.f3037731.js.map": "/final-project-start/static/js/main.f3037731.js.map",
     "787.4ef7427d.chunk.js.map": "/final-project-start/static/js/787.4ef7427d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.846dc9ac.css",
-    "static/js/main.b62dac4d.js"
+    "static/js/main.f3037731.js"
   ]
 }

@@ -20,7 +20,7 @@ All files          |   56.84 |    14.81 |   41.46 |   59.09 |
  ImageDownload.tsx |      30 |        0 |      20 |      30 | 7-12,24           
  ListOb.tsx        |     100 |      100 |     100 |     100 |                   
  Overlay.tsx       |      50 |      100 |       0 |      50 | 8                 
- Pic.tsx           |     100 |       50 |     100 |     100 | 28                
+ Pic.tsx           |     100 |       50 |     100 |     100 | 42                
  Square.tsx        |     100 |      100 |     100 |     100 |                   
  constants.ts      |     100 |      100 |     100 |     100 |                   
  interfaces.ts     |       0 |        0 |       0 |       0 |                   
@@ -28,5 +28,5 @@ All files          |   56.84 |    14.81 |   41.46 |   59.09 |
 Test Suites: 1 passed, 1 total
 Tests:       1 passed, 1 total
 Snapshots:   0 total
-Time:        2.567 s
+Time:        2.638 s
 Ran all test suites.
