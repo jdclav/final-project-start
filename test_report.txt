@@ -6,28 +6,29 @@ Browserslist: caniuse-lite is outdated. Please run:
   npx browserslist@latest --update-db
   Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
 PASS src/App.test.tsx
-  ✓ renders the course name somewhere (494 ms)
+  ✓ renders the course name somewhere (554 ms)
 
--------------------|---------|----------|---------|---------|-------------------
-File               | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
--------------------|---------|----------|---------|---------|-------------------
-All files          |   55.26 |    14.28 |      36 |      57 |                   
- App.tsx           |   47.82 |        0 |   11.11 |   57.89 | 266,277-295,346   
- Board.tsx         |   54.54 |     9.09 |      50 |   53.33 | 12,15,70-88,137   
- BoardSquare.tsx   |   71.42 |    33.33 |      50 |   71.42 | 25-27             
- DeleteBin.tsx     |   66.66 |    33.33 |      50 |   66.66 | 14-16             
- GridEdit.tsx      |      50 |      100 |   33.33 |      50 | 12-16             
- ImageDownload.tsx |      30 |        0 |      20 |      30 | 7-12,24           
- ListOb.tsx        |     100 |      100 |     100 |     100 |                   
- Overlay.tsx       |      50 |      100 |       0 |      50 | 8                 
- Pic.tsx           |      60 |       20 |      25 |      60 | 33-44,48,85       
- Sorting.tsx       |   33.33 |      100 |   33.33 |   33.33 | 14-15             
- Square.tsx        |     100 |      100 |     100 |     100 |                   
- constants.ts      |     100 |      100 |     100 |     100 |                   
- interfaces.ts     |       0 |        0 |       0 |       0 |                   
--------------------|---------|----------|---------|---------|-------------------
+-------------------|---------|----------|---------|---------|-------------------------------------
+File               | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s                   
+-------------------|---------|----------|---------|---------|-------------------------------------
+All files          |   53.43 |    15.55 |   32.14 |   54.83 |                                     
+ App.tsx           |   45.71 |       20 |    7.69 |   51.61 | 270,274,278-279,290-308,316-321,351 
+ Board.tsx         |   54.54 |     9.09 |      50 |   53.33 | 17,20,83-101,151                    
+ BoardSquare.tsx   |   71.42 |    33.33 |      50 |   71.42 | 25-27                               
+ DeleteBin.tsx     |   66.66 |    33.33 |      50 |   66.66 | 14-16                               
+ GridEdit.tsx      |      50 |      100 |   33.33 |      50 | 12-16                               
+ ImageDownload.tsx |      30 |        0 |      20 |      30 | 7-12,24                             
+ ListOb.tsx        |     100 |      100 |     100 |     100 |                                     
+ Overlay.tsx       |      50 |      100 |       0 |      50 | 8                                   
+ Pic.tsx           |   56.52 |    14.28 |   22.22 |   56.52 | 34-50,54,92                         
+ Sorting.tsx       |   33.33 |      100 |   33.33 |   33.33 | 14-15                               
+ Square.tsx        |     100 |      100 |     100 |     100 |                                     
+ TileEdit.tsx      |      50 |      100 |       0 |      50 | 14                                  
+ constants.ts      |     100 |      100 |     100 |     100 |                                     
+ interfaces.ts     |       0 |        0 |       0 |       0 |                                     
+-------------------|---------|----------|---------|---------|-------------------------------------
 Test Suites: 1 passed, 1 total
 Tests:       1 passed, 1 total
 Snapshots:   0 total
-Time:        4.268 s
+Time:        4.066 s
 Ran all test suites.
