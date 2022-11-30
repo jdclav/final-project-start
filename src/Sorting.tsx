@@ -10,11 +10,12 @@ export function SortingItems({
 }): JSX.Element {
     return (
         <Button
-            onClick={() =>
+            onClick={() => {
+                const copyTile = [...sourceTile];
                 setSourceTile(
-                    sourceTile.sort((a, b) => a.name.localeCompare(b.name))
-                )
-            }
+                    copyTile.sort((a, b) => a.name.localeCompare(b.name))
+                );
+            }}
         >
             Sort By Name
         </Button>
