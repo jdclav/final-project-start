@@ -39,6 +39,9 @@ const App: React.FC = (): JSX.Element => {
         setSelectTile(tile);
         setMiddleClick(true);
     };
+    const updateSourceTile = (tiles: tileItem[]) => {
+        setSourceTile(tiles);
+    };
 
     const changeTile = (
         index: number,
@@ -98,7 +101,7 @@ const App: React.FC = (): JSX.Element => {
             <div>Junnan Bai</div>
             <ImageDownload></ImageDownload>
             <SortingItems
-                setSourceTile={setSourceTile}
+                setSourceTile={updateSourceTile}
                 sourceTile={sourceTile}
             ></SortingItems>
             <GridEdit changeX={changeXSize} changeY={changeYSize}></GridEdit>
