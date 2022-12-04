@@ -5,6 +5,7 @@ import { tileItem } from "./interfaces";
 import Pic from "./Pic";
 import SortName from "./SortName";
 import SortSnap from "./SortSnap";
+import "./Rightbar.css";
 
 type listProps = {
     setSourceTiles: (newTile: tileItem[]) => void;
@@ -44,31 +45,34 @@ const ListOb: React.FC<listProps> = (props) => {
             </div>
             <div>
                 <input type="text" onChange={handleChange} />
-                {sourceTiles.map((sortTile) => {
-                    if (
-                        search === "" ||
-                        sortTile.name
-                            .toLowerCase()
-                            .includes(search.toLowerCase())
-                    ) {
-                        return (
-                            <div
-                                style={{
-                                    display: "inline-block",
-                                    width: "50%"
-                                }}
-                            >
-                                <h3>{sortTile.name}</h3>
-                                <Pic
-                                    tile={sortTile}
-                                    scale={100}
-                                    updateSelectTile={updateSelectTile}
-                                />
-                            </div>
-                        );
-                    }
-                    return null;
-                })}
+                <div className="list">
+                    {sourceTiles.map((sortTile: tileItem, key: number) => {
+                        if (
+                            search === "" ||
+                            sortTile.name
+                                .toLowerCase()
+                                .includes(search.toLowerCase())
+                        ) {
+                            return (
+                                <div
+                                    key={key}
+                                    style={{
+                                        display: "inline-block",
+                                        width: "50%"
+                                    }}
+                                >
+                                    <h3>{sortTile.name}</h3>
+                                    <Pic
+                                        tile={sortTile}
+                                        scale={100}
+                                        updateSelectTile={updateSelectTile}
+                                    />
+                                </div>
+                            );
+                        }
+                        return null;
+                    })}
+                </div>
             </div>
         </div>
     );

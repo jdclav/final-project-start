@@ -11,11 +11,6 @@ type ObjectProp = {
     tile: tileItem;
     scale: number;
     updateSelectTile: (tile: tileItem) => void;
-    //position: [number, number];
-    //orientation: number;
-    //size: number;
-    //texture: string;
-    //type: string;
 };
 
 const Pic: React.FC<ObjectProp> = (props) => {
