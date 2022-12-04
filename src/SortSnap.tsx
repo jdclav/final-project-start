@@ -1,6 +1,6 @@
 import React from "react";
 import { Button } from "react-bootstrap";
-import { tileItem } from "../interfaces";
+import { tileItem } from "./interfaces";
 
 type ObjectProp = {
     buttonName: string;
@@ -15,7 +15,7 @@ const SortName: React.FC<ObjectProp> = (props) => {
             onClick={() => {
                 const copyTile = [...listTiles];
                 updatelistTiles(
-                    copyTile.sort((a, b) => a.name.localeCompare(b.name))
+                    copyTile.sort((a, b) => a.snap.localeCompare(b.snap))
                 );
             }}
         >

@@ -1,5 +1,5 @@
 import React from "react";
-import { tileItem } from "../interfaces";
+import { tileItem } from "./interfaces";
 
 type listProps = {
     setSourceTile: (newTile: tileItem[]) => void;

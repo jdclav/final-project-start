@@ -2,8 +2,8 @@
 import React from "react";
 import Pic from "./Pic";
 import BoardSquare from "./BoardSquare";
-import { tileItem } from "../interfaces";
-import { ItemTypes } from "../constants";
+import { tileItem } from "./interfaces";
+import { ItemTypes } from "./constants";
 import { useDrop } from "react-dnd";
 
 const renderPiece = (
