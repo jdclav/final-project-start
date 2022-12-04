@@ -1,29 +1,22 @@
 import React from "react";
 import { Form } from "react-bootstrap";
 
-const GridEdit = ({
-    changeX,
-    changeY
-}: {
-    changeX: (x: number) => void;
-    changeY: (y: number) => void;
-}) => {
-    function updateX(event: React.ChangeEvent<HTMLInputElement>) {
-        changeX(parseInt(event.target.value));
-    }
+type ObjectProp = {
+    changeXSize: (event: React.ChangeEvent<HTMLInputElement>) => void;
+    changeYSize: (event: React.ChangeEvent<HTMLInputElement>) => void;
+};
 
-    function updateY(event: React.ChangeEvent<HTMLInputElement>) {
-        changeY(parseInt(event.target.value));
-    }
+const GridEdit: React.FC<ObjectProp> = (props) => {
+    const { changeXSize, changeYSize } = props;
 
     return (
         <div>
             <div>Change Grid size</div>
             <Form.Group controlId="formShortAnswer">
                 <Form.Label>X:</Form.Label>
-                <Form.Control type="number" onChange={updateX} />
+                <Form.Control type="number" onChange={changeXSize} />
                 <Form.Label>Y:</Form.Label>
-                <Form.Control type="number" onChange={updateY} />
+                <Form.Control type="number" onChange={changeYSize} />
             </Form.Group>
         </div>
     );

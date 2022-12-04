@@ -88,8 +88,12 @@ const App: React.FC = (): JSX.Element => {
         );
     };
 
-    const changeXSize = (x: number) => setXSize(x);
-    const changeYSize = (y: number) => setYSize(y);
+    const changeXSize = (event: React.ChangeEvent<HTMLInputElement>) => {
+        setXSize(parseInt(event.target.value));
+    };
+    const changeYSize = (event: React.ChangeEvent<HTMLInputElement>) => {
+        setYSize(parseInt(event.target.value));
+    };
 
     return (
         <div className="App">
@@ -105,7 +109,10 @@ const App: React.FC = (): JSX.Element => {
                 updatelistTiles={updateSourceTile}
                 listTiles={sourceTile}
             ></SortName>
-            <GridEdit changeX={changeXSize} changeY={changeYSize}></GridEdit>
+            <GridEdit
+                changeXSize={changeXSize}
+                changeYSize={changeYSize}
+            ></GridEdit>
             <div className="dndpage">
                 <DndProvider backend={HTML5Backend}>
                     <div className="fullgrid">
