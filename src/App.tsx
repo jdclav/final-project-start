@@ -140,6 +140,8 @@ const App: React.FC = (): JSX.Element => {
                     <div className="rightbar">
                         {(!middleClick && (
                             <ListOb
+                                setSourceTile={setSourceTile}
+                                sourceTile={sourceTile}
                                 tiles={sourceTile}
                                 deleteTile={deleteTile}
                                 updateSelectTile={updateSelectTile}
