@@ -15,7 +15,7 @@ import ListOb from "./ListOb";
 import { HTML5Backend } from "react-dnd-html5-backend";
 import { DndProvider } from "react-dnd";
 import TileEdit from "./TileEdit";
-import { SortingItems } from "./Sorting";
+import SortName from "./SortName";
 import tileList from "./images/tileList";
 
 const App: React.FC = (): JSX.Element => {
@@ -100,10 +100,11 @@ const App: React.FC = (): JSX.Element => {
             <div>Wenhan Ying</div>
             <div>Junnan Bai</div>
             <ImageDownload></ImageDownload>
-            <SortingItems
-                setSourceTile={updateSourceTile}
-                sourceTile={sourceTile}
-            ></SortingItems>
+            <SortName
+                buttonName="Sort by Name"
+                updatelistTiles={updateSourceTile}
+                listTiles={sourceTile}
+            ></SortName>
             <GridEdit changeX={changeXSize} changeY={changeYSize}></GridEdit>
             <div className="dndpage">
                 <DndProvider backend={HTML5Backend}>

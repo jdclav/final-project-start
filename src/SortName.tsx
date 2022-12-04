@@ -8,7 +8,7 @@ type ObjectProp = {
     updatelistTiles: (tile: tileItem[]) => void;
 };
 
-const SortList: React.FC<ObjectProp> = (props) => {
+const SortName: React.FC<ObjectProp> = (props) => {
     const { buttonName, listTiles, updatelistTiles } = props;
     return (
         <Button
@@ -24,4 +24,4 @@ const SortList: React.FC<ObjectProp> = (props) => {
     );
 };
 
-export default SortList;
+export default SortName;
