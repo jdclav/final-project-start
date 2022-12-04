@@ -1,6 +1,6 @@
 import React from "react";
 import { Button } from "react-bootstrap";
-import { tileItem } from "./interfaces";
+import { tileItem } from "../interfaces";
 
 type ObjectProp = {
     buttonName: string;

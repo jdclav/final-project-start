@@ -1,9 +1,9 @@
 /* eslint-disable no-extra-parens */
 import React, { Fragment, useState } from "react";
 import { useDrag } from "react-dnd";
-import { tileItem } from "./interfaces";
+import { tileItem } from "../interfaces";
 import { Button, Form } from "react-bootstrap";
-import "./Button.css";
+import "../css/Button.css";
 // import { BackgroundImage } from "./image/img";
 // import { image } from "html2canvas/dist/types/css/types/image";
 

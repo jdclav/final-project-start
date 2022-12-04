@@ -1,7 +1,7 @@
 import React from "react";
 import { useDrop } from "react-dnd";
-import { ItemTypes } from "./constants";
-import { tileItem } from "./interfaces";
+import { ItemTypes } from "../constants";
+import { tileItem } from "../interfaces";
 import Overlay from "./Overlay";
 
 type DeleteBinProps = {

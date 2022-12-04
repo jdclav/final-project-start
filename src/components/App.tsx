@@ -1,23 +1,23 @@
 /* eslint-disable no-extra-parens */
 import React, { /*MouseEvent,*/ useState } from "react";
-import "./App.css";
+
 import Board from "./Board";
 import GridEdit from "./GridEdit";
-import "./background.css";
 import ImageDownload from "./ImageDownload";
 import {
     TransformWrapper,
     TransformComponent,
     ReactZoomPanPinchRef
 } from "react-zoom-pan-pinch";
-import { tileItem } from "./interfaces";
+import { tileItem } from "../interfaces";
 import Rightbar from "./Rightbar";
 import { HTML5Backend } from "react-dnd-html5-backend";
 import { DndProvider } from "react-dnd";
 import TileEdit from "./TileEdit";
 import SortName from "./SortName";
-import tileList from "./images/tileList";
+import tileList from "../images/tileList";
 
+import "../css/App.css";
 const App: React.FC = (): JSX.Element => {
     const [xSize, setXSize] = useState<number>(5);
     const [ySize, setYSize] = useState<number>(5);

@@ -1,11 +1,11 @@
 /* eslint-disable no-extra-parens */
 import React, { useState } from "react";
 import DeleteBin from "./DeleteBin";
-import { tileItem } from "./interfaces";
+import { tileItem } from "../interfaces";
 import Pic from "./Pic";
 import SortName from "./SortName";
 import SortSnap from "./SortSnap";
-import "./Rightbar.css";
+import "../css/Rightbar.css";
 
 type listProps = {
     setSourceTiles: (newTile: tileItem[]) => void;
