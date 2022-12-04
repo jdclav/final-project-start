@@ -1,5 +1,5 @@
 /* eslint-disable no-extra-parens */
-import React from "react";
+import React, { useState } from "react";
 import DeleteBin from "./DeleteBin";
 import { tileItem } from "./interfaces";
 import Pic from "./Pic";
@@ -15,8 +15,7 @@ type listProps = {
 
 const ListOb: React.FC<listProps> = (props) => {
     const { setSourceTiles, sourceTiles, deleteTile, updateSelectTile } = props;
-    const [search, setSearch]: [string, (search: string) => void] =
-        React.useState("");
+    const [search, setSearch] = useState<string>("");
     const handleChange = (e: { target: { value: string } }) => {
         setSearch(e.target.value);
     };
