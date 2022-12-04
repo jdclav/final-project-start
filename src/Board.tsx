@@ -33,14 +33,7 @@ const renderSquare = (
     x: number,
     y: number,
     tiles: tileItem[],
-    changeTile: (
-        index: number,
-        location: [number, number],
-        color: string,
-        tags: string[],
-        snap: string,
-        src: string
-    ) => void,
+    changeTile: (tile: tileItem) => void,
     width: number,
     height: number,
     updateSelectTile: (tile: tileItem) => void
@@ -60,14 +53,7 @@ const renderSquare = (
 
 type BoardProps = {
     tile: tileItem[];
-    changeTile: (
-        index: number,
-        location: [number, number],
-        color: string,
-        tags: string[],
-        snap: string,
-        src: string
-    ) => void;
+    changeTile: (tile: tileItem) => void;
     x: number;
     y: number;
     scale: number;
@@ -99,18 +85,13 @@ const Board: React.FC<BoardProps> = (props) => {
                 y = 0;
             }
             props.changeTile(
-                item.tile.id,
-
-                [
-                    //monitor.getSourceClientOffset().x +
-                    x,
-                    //monitor.getSourceClientOffset().y +
-                    y
-                ],
-                item.tile.name,
-                item.tile.tags,
-                item.tile.snap,
-                item.tile.src
+                { ...item.tile, position: [x, y] }
+                // [
+                //     //monitor.getSourceClientOffset().x +
+                //     x,
+                //     //monitor.getSourceClientOffset().y +
+                //     y
+                // ],
             );
         },
         collect: (monitor) => ({

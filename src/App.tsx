@@ -1,6 +1,5 @@
 /* eslint-disable no-extra-parens */
 import React, { /*MouseEvent,*/ useState } from "react";
-
 import Board from ".//Board";
 import GridEdit from "./GridEdit";
 import ImageDownload from ".//ImageDownload";
@@ -14,9 +13,9 @@ import Rightbar from "./Rightbar";
 import { HTML5Backend } from "react-dnd-html5-backend";
 import { DndProvider } from "react-dnd";
 import TileEdit from "./TileEdit";
-import SortName from "./SortName";
 import tileList from "./images/tileList";
 import "./css/App.css";
+
 const App: React.FC = (): JSX.Element => {
     const [xSize, setXSize] = useState<number>(5);
     const [ySize, setYSize] = useState<number>(5);
@@ -38,35 +37,18 @@ const App: React.FC = (): JSX.Element => {
         setSelectTile(tile);
         setMiddleClick(true);
     };
-    const updateSourceTile = (tiles: tileItem[]) => {
-        setSourceTile(tiles);
-    };
 
-    const changeTile = (
-        index: number,
-        location: [number, number],
-        name: string,
-        tags: string[],
-        snap: string,
-        src: string
-    ) => {
-        if (index < 0) {
-            setTiles((oldArray) => [
+    const changeTile = (tile: tileItem) => {
+        if (tile.id < 0) {
+            setTiles((oldArray: tileItem[]) => [
                 ...oldArray,
-                {
-                    id: oldArray.length,
-                    position: location,
-                    name: name,
-                    tags: tags,
-                    snap: snap,
-                    src: src
-                }
+                { ...tile, id: oldArray.length }
             ]);
         } else {
             setTiles(
                 tiles.map((o: tileItem): tileItem => {
-                    if (o.id === index) {
-                        return { ...o, position: location };
+                    if (o.id === tile.id) {
+                        return tile;
                     } else {
                         return o;
                     }
@@ -103,11 +85,6 @@ const App: React.FC = (): JSX.Element => {
             <div>Wenhan Ying</div>
             <div>Junnan Bai</div>
             <ImageDownload></ImageDownload>
-            <SortName
-                buttonName="Sort by Name"
-                updatelistTiles={updateSourceTile}
-                listTiles={sourceTile}
-            ></SortName>
             <GridEdit
                 changeXSize={changeXSize}
                 changeYSize={changeYSize}
