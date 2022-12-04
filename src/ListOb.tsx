@@ -1,19 +1,20 @@
 /* eslint-disable no-extra-parens */
 import React from "react";
 import DeleteBin from "./DeleteBin";
-import { Button } from "react-bootstrap";
 import { tileItem } from "./interfaces";
 import Pic from "./Pic";
+import SortName from "./SortName";
+import SortSnap from "./SortSnap";
 
 type listProps = {
-    setSourceTile: (newTile: tileItem[]) => void;
-    sourceTile: tileItem[];
-    tiles: tileItem[];
+    setSourceTiles: (newTile: tileItem[]) => void;
+    sourceTiles: tileItem[];
     deleteTile: (index: number) => void;
     updateSelectTile: (tile: tileItem) => void;
 };
 
 const ListOb: React.FC<listProps> = (props) => {
+    const { setSourceTiles, sourceTiles, deleteTile, updateSelectTile } = props;
     const [search, setSearch]: [string, (search: string) => void] =
         React.useState("");
     const handleChange = (e: { target: { value: string } }) => {
@@ -28,38 +29,26 @@ const ListOb: React.FC<listProps> = (props) => {
                     height: "10vw"
                 }}
             >
-                <DeleteBin deleteTile={props.deleteTile} />
+                <DeleteBin deleteTile={deleteTile} />
             </div>
             <div>
-                <Button
-                    onClick={() =>
-                        props.setSourceTile(
-                            props.sourceTile.sort((a, b) =>
-                                a.name.localeCompare(b.name)
-                            )
-                        )
-                    }
-                >
-                    Sort By Name
-                </Button>
-                <Button
-                    onClick={() =>
-                        props.setSourceTile(
-                            props.sourceTile.sort((a, b) =>
-                                a.snap.localeCompare(b.snap)
-                            )
-                        )
-                    }
-                >
-                    Sort By Snap
-                </Button>
+                <SortName
+                    buttonName={"Sort by Name"}
+                    listTiles={sourceTiles}
+                    updatelistTiles={setSourceTiles}
+                ></SortName>
+                <SortSnap
+                    buttonName={"Sort by Snap"}
+                    listTiles={sourceTiles}
+                    updatelistTiles={setSourceTiles}
+                ></SortSnap>
             </div>
             <div>
                 <input type="text" onChange={handleChange} />
-                {props.sourceTile.map((sourceTile) => {
+                {sourceTiles.map((sortTile) => {
                     if (
                         search === "" ||
-                        sourceTile.name
+                        sortTile.name
                             .toLowerCase()
                             .includes(search.toLowerCase())
                     ) {
@@ -70,11 +59,11 @@ const ListOb: React.FC<listProps> = (props) => {
                                     width: "50%"
                                 }}
                             >
-                                <h3>{sourceTile.name}</h3>
+                                <h3>{sortTile.name}</h3>
                                 <Pic
-                                    tile={sourceTile}
+                                    tile={sortTile}
                                     scale={100}
-                                    updateSelectTile={props.updateSelectTile}
+                                    updateSelectTile={updateSelectTile}
                                 />
                             </div>
                         );
