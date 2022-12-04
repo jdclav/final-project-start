@@ -14,7 +14,7 @@ type listProps = {
     updateSelectTile: (tile: tileItem) => void;
 };
 
-const ListOb: React.FC<listProps> = (props) => {
+const Rightbar: React.FC<listProps> = (props) => {
     const { setSourceTiles, sourceTiles, deleteTile, updateSelectTile } = props;
     const [search, setSearch] = useState<string>("");
     const handleChange = (e: { target: { value: string } }) => {
@@ -78,4 +78,4 @@ const ListOb: React.FC<listProps> = (props) => {
     );
 };
 
-export default ListOb;
+export default Rightbar;

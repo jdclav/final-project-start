@@ -11,7 +11,7 @@ import {
     ReactZoomPanPinchRef
 } from "react-zoom-pan-pinch";
 import { tileItem } from "./interfaces";
-import ListOb from "./ListOb";
+import Rightbar from "./Rightbar";
 import { HTML5Backend } from "react-dnd-html5-backend";
 import { DndProvider } from "react-dnd";
 import TileEdit from "./TileEdit";
@@ -147,12 +147,12 @@ const App: React.FC = (): JSX.Element => {
                     </div>
                     <div className="rightbar">
                         {(!middleClick && (
-                            <ListOb
+                            <Rightbar
                                 setSourceTiles={setSourceTile}
                                 sourceTiles={sourceTile}
                                 deleteTile={deleteTile}
                                 updateSelectTile={updateSelectTile}
-                            ></ListOb>
+                            ></Rightbar>
                         )) ||
                             (middleClick && (
                                 <TileEdit
