@@ -20,7 +20,7 @@ const OpenScreen: React.FC<screenProps> = (props) => {
                     props.updatePage(1);
                 }}
             >
-                Create New Map
+                Start Making Your Map!
             </Button>
         </div>
     );
