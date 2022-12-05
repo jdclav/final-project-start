@@ -22,6 +22,7 @@ const Pic: React.FC<ObjectProp> = (props) => {
     });
     const update = (event: React.MouseEvent) => {
         if (event.button === 1 && tile.id >= 0) {
+            event.preventDefault();
             updateSelectTile(tile);
         }
     };
