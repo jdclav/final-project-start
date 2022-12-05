@@ -8,14 +8,7 @@ import Square from "./Square";
 type BoardSquareProps = {
     x: number;
     y: number;
-    changeTile: (
-        index: number,
-        location: [number, number],
-        color: string,
-        tags: string[],
-        snap: string,
-        src: string
-    ) => void;
+    changeTile: (tile: tileItem) => void;
 };
 
 const BoardSquare: React.FC<BoardSquareProps> = (props) => {
@@ -24,14 +17,7 @@ const BoardSquare: React.FC<BoardSquareProps> = (props) => {
         accept: ItemTypes.snap,
         canDrop: () => true,
         drop: (item: { type: string; tile: tileItem }) =>
-            props.changeTile(
-                item.tile.id,
-                [x, y],
-                item.tile.name,
-                item.tile.tags,
-                item.tile.snap,
-                item.tile.src
-            ),
+            props.changeTile({ ...item.tile, position: [x, y] }),
         collect: (monitor) => ({
             isOver: !!monitor.isOver(),
             canDrop: !!monitor.canDrop()

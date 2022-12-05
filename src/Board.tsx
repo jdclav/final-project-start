@@ -6,6 +6,14 @@ import { tileItem } from "./interfaces";
 import { ItemTypes } from "./constants";
 import { useDrop } from "react-dnd";
 
+const defaultScale = 100;
+const xIndex = 0;
+const yIndex = 1;
+const sourcePosition = -100;
+
+const genKey = (x: number, y: number): number =>
+    ((x + y) * (x + y + 1)) / 2 + x;
+
 const renderPiece = (
     x: number,
     y: number,
@@ -14,13 +22,15 @@ const renderPiece = (
 ) => {
     const location = tiles.filter(
         (o: tileItem): boolean =>
-            x === o.position[0] && y === o.position[1] && o.snap === "snap"
+            x === o.position[xIndex] &&
+            y === o.position[yIndex] &&
+            o.snap === "snap"
     );
     if (location.length > 0) {
         return (
             <Pic
                 tile={location[0]}
-                scale={100}
+                scale={defaultScale}
                 updateSelectTile={updateSelectTile}
             />
         );
@@ -33,14 +43,7 @@ const renderSquare = (
     x: number,
     y: number,
     tiles: tileItem[],
-    changeTile: (
-        index: number,
-        location: [number, number],
-        color: string,
-        tags: string[],
-        snap: string,
-        src: string
-    ) => void,
+    changeTile: (tile: tileItem) => void,
     width: number,
     height: number,
     updateSelectTile: (tile: tileItem) => void
@@ -48,8 +51,11 @@ const renderSquare = (
     return (
         <div
             className="square"
-            key={((x + y) * (x + y + 1)) / 2 + x}
-            style={{ width: 100 / width + "%", height: 100 / height + "%" }}
+            key={genKey(x, y)}
+            style={{
+                width: defaultScale / width + "%",
+                height: defaultScale / height + "%"
+            }}
         >
             <BoardSquare x={x} y={y} changeTile={changeTile}>
                 {renderPiece(x, y, tiles, updateSelectTile)}
@@ -60,14 +66,7 @@ const renderSquare = (
 
 type BoardProps = {
     tile: tileItem[];
-    changeTile: (
-        index: number,
-        location: [number, number],
-        color: string,
-        tags: string[],
-        snap: string,
-        src: string
-    ) => void;
+    changeTile: (tile: tileItem) => void;
     x: number;
     y: number;
     scale: number;
@@ -75,43 +74,41 @@ type BoardProps = {
 };
 
 const Board: React.FC<BoardProps> = (props) => {
+    const { tile, changeTile, x, y, scale, updateSelectTile } = props;
     const squares = [];
-    const freeTiles = renderFree(props.tile);
-
+    const freeTiles = renderFree(tile);
+    const grid = document.getElementById("board");
     const [, drop] = useDrop({
         accept: ItemTypes.free,
         canDrop: () => true,
         drop: (item: { type: string; tile: tileItem }, monitor) => {
             let x;
             let y;
-            const position = monitor.getDifferenceFromInitialOffset();
+            const positionDifference = monitor.getDifferenceFromInitialOffset();
+            const positionCurrent = monitor.getClientOffset();
+            let offset = null;
+            if (grid !== null) {
+                offset = grid.getBoundingClientRect();
+            }
             if (
-                item.tile.position[0] === -100 &&
-                item.tile.position[1] === -100
+                item.tile.position[xIndex] === sourcePosition &&
+                item.tile.position[yIndex] === sourcePosition &&
+                positionCurrent !== null &&
+                offset !== null
             ) {
-                x = 0;
-                y = 0;
-            } else if (position !== null) {
-                x = item.tile.position[0] + position.x / props.scale;
-                y = item.tile.position[1] + position.y / props.scale;
+                x = positionCurrent.x - offset.x;
+                y = positionCurrent.y - offset.y;
+            } else if (
+                positionDifference !== null &&
+                positionCurrent !== null
+            ) {
+                x = item.tile.position[xIndex] + positionDifference.x / scale;
+                y = item.tile.position[yIndex] + positionDifference.y / scale;
             } else {
                 x = 0;
                 y = 0;
             }
-            props.changeTile(
-                item.tile.id,
-
-                [
-                    //monitor.getSourceClientOffset().x +
-                    x,
-                    //monitor.getSourceClientOffset().y +
-                    y
-                ],
-                item.tile.name,
-                item.tile.tags,
-                item.tile.snap,
-                item.tile.src
-            );
+            changeTile({ ...item.tile, position: [x, y] });
         },
         collect: (monitor) => ({
             isOver: !!monitor.isOver(),
@@ -119,18 +116,10 @@ const Board: React.FC<BoardProps> = (props) => {
         })
     });
 
-    for (let i = 0; i < props.y; i++) {
-        for (let j = 0; j < props.x; j++) {
+    for (let i = 0; i < y; i++) {
+        for (let j = 0; j < x; j++) {
             squares.push(
-                renderSquare(
-                    j,
-                    i,
-                    props.tile,
-                    props.changeTile,
-                    props.x,
-                    props.y,
-                    props.updateSelectTile
-                )
+                renderSquare(j, i, tile, changeTile, x, y, updateSelectTile)
             );
         }
     }
@@ -154,14 +143,14 @@ const Board: React.FC<BoardProps> = (props) => {
                         z-index="10"
                         style={{
                             position: "absolute",
-                            left: o.position[0],
-                            top: o.position[1]
+                            left: o.position[xIndex],
+                            top: o.position[yIndex]
                         }}
                     >
                         <Pic
                             tile={o}
-                            scale={500 / props.x}
-                            updateSelectTile={props.updateSelectTile}
+                            scale={(5 * defaultScale) / x}
+                            updateSelectTile={updateSelectTile}
                         />
                     </div>
                 );
