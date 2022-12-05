@@ -1,6 +1,7 @@
 /* eslint-disable no-extra-parens */
 import React from "react";
 import DeleteBin from "./DeleteBin";
+import ImageDownload from "./ImageDownload";
 import { tileItem } from "./interfaces";
 import Search from "./Search";
 import SortName from "./SortName";
@@ -17,6 +18,7 @@ const Rightbar: React.FC<listProps> = (props) => {
     const { setSourceTiles, sourceTiles, deleteTile, updateSelectTile } = props;
     return (
         <div>
+            <ImageDownload />
             <div
                 style={{
                     display: "inline-block",

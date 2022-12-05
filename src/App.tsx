@@ -2,7 +2,6 @@
 import React, { /*MouseEvent,*/ useState } from "react";
 import Board from ".//Board";
 import GridEdit from "./GridEdit";
-import ImageDownload from ".//ImageDownload";
 import {
     TransformWrapper,
     TransformComponent,
@@ -15,6 +14,7 @@ import { DndProvider } from "react-dnd";
 import TileEdit from "./TileEdit";
 import tileList from "./images/tileList";
 import "./css/App.css";
+import OpenScreen from "./OpenScreen";
 
 const App: React.FC = (): JSX.Element => {
     const [xSize, setXSize] = useState<number>(5);
@@ -24,6 +24,7 @@ const App: React.FC = (): JSX.Element => {
     const [middleClick, setMiddleClick] = useState<boolean>(false);
     const [selectTile, setSelectTile] = useState<tileItem | null>(null);
     const [sourceTile, setSourceTile] = useState<tileItem[]>(tileList);
+    const [page, setPage] = useState<number>(0);
 
     const deleteTile = (index: number) => {
         setTiles(tiles.filter((tile: tileItem): boolean => tile.id !== index));
@@ -63,16 +64,13 @@ const App: React.FC = (): JSX.Element => {
     const changeYSize = (event: React.ChangeEvent<HTMLInputElement>) => {
         setYSize(parseInt(event.target.value));
     };
+    const updatePage = (newPage: number) => {
+        setPage(newPage);
+    };
 
     return (
         <div className="App">
-            <header className="App-header">
-                Table Top Map Editor for CISC275
-            </header>
-            <div>Justin Clavette</div>
-            <div>Wenhan Ying</div>
-            <div>Junnan Bai</div>
-            <ImageDownload></ImageDownload>
+            <OpenScreen updatePage={updatePage} />
             <GridEdit
                 changeXSize={changeXSize}
                 changeYSize={changeYSize}
