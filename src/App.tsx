@@ -24,13 +24,15 @@ const App: React.FC = (): JSX.Element => {
 
     return (
         <div className="App">
-            <OpenScreen updatePage={updatePage} />
-            <CreateScreen
-                updatePage={updatePage}
-                changeXSize={changeXSize}
-                changeYSize={changeYSize}
-            />
-            <DndScreen xSize={xSize} ySize={ySize} />
+            {(page === 0 && <OpenScreen updatePage={updatePage} />) ||
+                (page === 1 && (
+                    <CreateScreen
+                        updatePage={updatePage}
+                        changeXSize={changeXSize}
+                        changeYSize={changeYSize}
+                    />
+                )) ||
+                (page === 2 && <DndScreen xSize={xSize} ySize={ySize} />)}
         </div>
     );
 };
