@@ -33,7 +33,7 @@ const Search: React.FC<listProps> = (props) => {
                                     width: "50%"
                                 }}
                             >
-                                <h3>{sortTile.name}</h3>
+                                <p>{sortTile.name}</p>
                                 <Pic
                                     tile={sortTile}
                                     scale={100}

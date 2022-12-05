@@ -1,11 +1,10 @@
 /* eslint-disable no-extra-parens */
-import React, { useState } from "react";
+import React from "react";
 import DeleteBin from "./DeleteBin";
 import { tileItem } from "./interfaces";
-import Pic from "./Pic";
+import Search from "./Search";
 import SortName from "./SortName";
 import SortSnap from "./SortSnap";
-import "./css/Rightbar.css";
 
 type listProps = {
     setSourceTiles: (newTile: tileItem[]) => void;
@@ -16,10 +15,6 @@ type listProps = {
 
 const Rightbar: React.FC<listProps> = (props) => {
     const { setSourceTiles, sourceTiles, deleteTile, updateSelectTile } = props;
-    const [search, setSearch] = useState<string>("");
-    const handleChange = (e: { target: { value: string } }) => {
-        setSearch(e.target.value);
-    };
     return (
         <div>
             <div
@@ -42,37 +37,10 @@ const Rightbar: React.FC<listProps> = (props) => {
                     listTiles={sourceTiles}
                     updatelistTiles={setSourceTiles}
                 ></SortSnap>
-            </div>
-            <div>
-                <input type="text" onChange={handleChange} />
-                <div className="list">
-                    {sourceTiles.map((sortTile: tileItem, key: number) => {
-                        if (
-                            search === "" ||
-                            sortTile.name
-                                .toLowerCase()
-                                .includes(search.toLowerCase())
-                        ) {
-                            return (
-                                <div
-                                    key={key}
-                                    style={{
-                                        display: "inline-block",
-                                        width: "50%"
-                                    }}
-                                >
-                                    <h3>{sortTile.name}</h3>
-                                    <Pic
-                                        tile={sortTile}
-                                        scale={100}
-                                        updateSelectTile={updateSelectTile}
-                                    />
-                                </div>
-                            );
-                        }
-                        return null;
-                    })}
-                </div>
+                <Search
+                    updateSelectTile={updateSelectTile}
+                    sourceTiles={sourceTiles}
+                ></Search>
             </div>
         </div>
     );
