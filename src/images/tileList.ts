@@ -30,7 +30,7 @@ const tileList: tileItem[] = [
         snap: "free",
         src: "./images/burger.jpg",
         scale: 1,
-        constScale: 1,
+        constScale: 0.5,
         orientation: 0
     },
     {

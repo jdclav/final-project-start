@@ -57,18 +57,6 @@ const App: React.FC = (): JSX.Element => {
         }
     };
 
-    const updateTile = (tile: tileItem) => {
-        setTiles(
-            tiles.map((o: tileItem): tileItem => {
-                if (o.id === tile.id) {
-                    return tile;
-                } else {
-                    return o;
-                }
-            })
-        );
-    };
-
     const changeXSize = (event: React.ChangeEvent<HTMLInputElement>) => {
         setXSize(parseInt(event.target.value));
     };
@@ -135,7 +123,7 @@ const App: React.FC = (): JSX.Element => {
                                     tile={selectTile}
                                     tileList={tiles}
                                     resetMiddle={resetMiddle}
-                                    updateTile={updateTile}
+                                    changeTile={changeTile}
                                 />
                             ))}
                     </div>
