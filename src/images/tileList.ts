@@ -6,7 +6,10 @@ const tileList: tileItem[] = [
         name: "Barrel",
         tags: ["inside", "furniture"],
         snap: "free",
-        src: "./images/barrel.jpg"
+        src: "./images/barrel.jpg",
+        scale: 1,
+        constScale: 1,
+        orientation: 0
     },
     {
         id: -2,
@@ -14,7 +17,10 @@ const tileList: tileItem[] = [
         name: "Wood floor",
         tags: ["inside", "furniture"],
         snap: "snap",
-        src: "./images/woodFloor.jpg"
+        src: "./images/woodFloor.jpg",
+        scale: 1,
+        constScale: 1,
+        orientation: 0
     },
     {
         id: -3,
@@ -22,7 +28,10 @@ const tileList: tileItem[] = [
         name: "Burger",
         tags: ["inside", "outside", "food"],
         snap: "free",
-        src: "./images/burger.jpg"
+        src: "./images/burger.jpg",
+        scale: 1,
+        constScale: 1,
+        orientation: 0
     },
     {
         id: -4,
@@ -30,7 +39,10 @@ const tileList: tileItem[] = [
         name: "Bushes",
         tags: ["outside", "plants", "road"],
         snap: "free",
-        src: "./images/bushes.jpg"
+        src: "./images/bushes.jpg",
+        scale: 1,
+        constScale: 1,
+        orientation: 0
     },
     {
         id: -5,
@@ -38,7 +50,10 @@ const tileList: tileItem[] = [
         name: "Candle",
         tags: ["inside", "light"],
         snap: "free",
-        src: "./images/candle.jpg"
+        src: "./images/candle.jpg",
+        scale: 1,
+        constScale: 1,
+        orientation: 0
     },
     {
         id: -6,
@@ -46,7 +61,10 @@ const tileList: tileItem[] = [
         name: "Window",
         tags: ["inside", "furniture"],
         snap: "free",
-        src: "./images/window.jpg"
+        src: "./images/window.jpg",
+        scale: 1,
+        constScale: 1,
+        orientation: 0
     },
     {
         id: -7,
@@ -54,7 +72,10 @@ const tileList: tileItem[] = [
         name: "chair",
         tags: ["inside", "furniture"],
         snap: "free",
-        src: "./images/chair.jpg"
+        src: "./images/chair.jpg",
+        scale: 1,
+        constScale: 1,
+        orientation: 0
     },
     {
         id: -8,
@@ -62,7 +83,10 @@ const tileList: tileItem[] = [
         name: "Chest",
         tags: ["inside", "outside", "storage"],
         snap: "free",
-        src: "./images/chest.jpg"
+        src: "./images/chest.jpg",
+        scale: 1,
+        constScale: 1,
+        orientation: 0
     },
     {
         id: -9,
@@ -70,7 +94,10 @@ const tileList: tileItem[] = [
         name: "Flower1",
         tags: ["outside", "inside", "plants"],
         snap: "free",
-        src: "./images/Chrysanthemum.jpg"
+        src: "./images/Chrysanthemum.jpg",
+        scale: 1,
+        constScale: 1,
+        orientation: 0
     },
     {
         id: -10,
@@ -78,7 +105,10 @@ const tileList: tileItem[] = [
         name: "Cracks",
         tags: ["outside", "cracks"],
         snap: "free",
-        src: "./images/cracks.jpg"
+        src: "./images/cracks.jpg",
+        scale: 1,
+        constScale: 1,
+        orientation: 0
     },
     {
         id: -11,
@@ -86,7 +116,10 @@ const tileList: tileItem[] = [
         name: "Crate",
         tags: ["inside", "outside", "furniture"],
         snap: "free",
-        src: "./images/crate.jpg"
+        src: "./images/crate.jpg",
+        scale: 1,
+        constScale: 1,
+        orientation: 0
     },
     {
         id: -12,
@@ -94,7 +127,10 @@ const tileList: tileItem[] = [
         name: "Tree1",
         tags: ["outside", "plants"],
         snap: "free",
-        src: "./images/tree.jpg"
+        src: "./images/tree.jpg",
+        scale: 1,
+        constScale: 1,
+        orientation: 0
     },
     {
         id: -13,
@@ -102,7 +138,10 @@ const tileList: tileItem[] = [
         name: "Door",
         tags: ["inside", "outside", "furniture"],
         snap: "free",
-        src: "./images/door.jpg"
+        src: "./images/door.jpg",
+        scale: 1,
+        constScale: 1,
+        orientation: 0
     },
     {
         id: -14,
@@ -110,7 +149,10 @@ const tileList: tileItem[] = [
         name: "Flag",
         tags: ["outside", "decoration"],
         snap: "free",
-        src: "./images/flag.jpg"
+        src: "./images/flag.jpg",
+        scale: 1,
+        constScale: 1,
+        orientation: 0
     },
     {
         id: -15,
@@ -118,7 +160,10 @@ const tileList: tileItem[] = [
         name: "Tile Floor",
         tags: ["inside", "furniture"],
         snap: "snap",
-        src: "./images/floor.jpg"
+        src: "./images/floor.jpg",
+        scale: 1,
+        constScale: 1,
+        orientation: 0
     },
     {
         id: -16,
@@ -126,7 +171,10 @@ const tileList: tileItem[] = [
         name: "Coin",
         tags: ["inside", "outside", "coin"],
         snap: "free",
-        src: "./images/goldCoin.jpg"
+        src: "./images/goldCoin.jpg",
+        scale: 1,
+        constScale: 1,
+        orientation: 0
     },
     {
         id: -17,
@@ -134,7 +182,10 @@ const tileList: tileItem[] = [
         name: "Grass",
         tags: ["outside", "plants", "road"],
         snap: "free",
-        src: "./images/grass.jpg"
+        src: "./images/grass.jpg",
+        scale: 1,
+        constScale: 1,
+        orientation: 0
     },
     {
         id: -18,
@@ -142,7 +193,10 @@ const tileList: tileItem[] = [
         name: "Tree2",
         tags: ["outside", "plants"],
         snap: "free",
-        src: "./images/greenTree.jpg"
+        src: "./images/greenTree.jpg",
+        scale: 1,
+        constScale: 1,
+        orientation: 0
     },
     {
         id: -19,
@@ -150,7 +204,10 @@ const tileList: tileItem[] = [
         name: "Stone1",
         tags: ["outside", "stone"],
         snap: "free",
-        src: "./images/hugeStone.jpg"
+        src: "./images/hugeStone.jpg",
+        scale: 1,
+        constScale: 1,
+        orientation: 0
     },
     {
         id: -20,
@@ -158,7 +215,10 @@ const tileList: tileItem[] = [
         name: "Paper",
         tags: ["inside", "item"],
         snap: "free",
-        src: "./images/paper.jpg"
+        src: "./images/paper.jpg",
+        scale: 1,
+        constScale: 1,
+        orientation: 0
     },
     {
         id: -21,
@@ -166,7 +226,10 @@ const tileList: tileItem[] = [
         name: "Pasta",
         tags: ["inside", "outside", "food"],
         snap: "free",
-        src: "./images/pasta.jpg"
+        src: "./images/pasta.jpg",
+        scale: 1,
+        constScale: 1,
+        orientation: 0
     },
     {
         id: -22,
@@ -174,7 +237,10 @@ const tileList: tileItem[] = [
         name: "Path1",
         tags: ["outside", "road"],
         snap: "snap",
-        src: "./images/path.jpg"
+        src: "./images/path.jpg",
+        scale: 1,
+        constScale: 1,
+        orientation: 0
     },
     {
         id: -23,
@@ -182,7 +248,10 @@ const tileList: tileItem[] = [
         name: "Pen",
         tags: ["inside", "item"],
         snap: "free",
-        src: "./images/pen.jpg"
+        src: "./images/pen.jpg",
+        scale: 1,
+        constScale: 1,
+        orientation: 0
     },
     {
         id: -24,
@@ -190,7 +259,10 @@ const tileList: tileItem[] = [
         name: "Pillar",
         tags: ["inside", "outside", "furniture"],
         snap: "snap",
-        src: "./images/pillar.jpg"
+        src: "./images/pillar.jpg",
+        scale: 1,
+        constScale: 1,
+        orientation: 0
     },
     {
         id: -25,
@@ -198,7 +270,10 @@ const tileList: tileItem[] = [
         name: "Pizza",
         tags: ["inside", "outside", "food"],
         snap: "free",
-        src: "./images/pizza.jpg"
+        src: "./images/pizza.jpg",
+        scale: 1,
+        constScale: 1,
+        orientation: 0
     },
     {
         id: -26,
@@ -206,7 +281,10 @@ const tileList: tileItem[] = [
         name: "Flower2",
         tags: ["inside", "outside", "plants"],
         snap: "free",
-        src: "./images/redFlowers.jpg"
+        src: "./images/redFlowers.jpg",
+        scale: 1,
+        constScale: 1,
+        orientation: 0
     },
     {
         id: -27,
@@ -214,7 +292,10 @@ const tileList: tileItem[] = [
         name: "Rocks",
         tags: ["outside", "stone"],
         snap: "free",
-        src: "./images/rocks.png"
+        src: "./images/rocks.png",
+        scale: 1,
+        constScale: 1,
+        orientation: 0
     },
     {
         id: -28,
@@ -222,7 +303,10 @@ const tileList: tileItem[] = [
         name: "Stone2",
         tags: ["outside", "stone"],
         snap: "free",
-        src: "./images/stone.jpg"
+        src: "./images/stone.jpg",
+        scale: 1,
+        constScale: 1,
+        orientation: 0
     },
     {
         id: -29,
@@ -230,7 +314,10 @@ const tileList: tileItem[] = [
         name: "Table",
         tags: ["inside", "outside", "furniture"],
         snap: "free",
-        src: "./images/table.jpg"
+        src: "./images/table.jpg",
+        scale: 1,
+        constScale: 1,
+        orientation: 0
     },
     {
         id: -30,
@@ -238,7 +325,10 @@ const tileList: tileItem[] = [
         name: "Path2",
         tags: ["outside", "road"],
         snap: "snap",
-        src: "./images/topPath.jpg"
+        src: "./images/topPath.jpg",
+        scale: 1,
+        constScale: 1,
+        orientation: 0
     }
 ];
 export default tileList;

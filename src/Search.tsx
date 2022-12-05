@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { tileItem } from "./interfaces";
 import Pic from "./Pic";
-import "./css/Search.css";
 import { Form } from "react-bootstrap";
+import "./css/Search.css";
 
 type listProps = {
     updateSelectTile: (tile: tileItem) => void;

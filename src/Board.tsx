@@ -63,36 +63,38 @@ type BoardProps = {
 const Board: React.FC<BoardProps> = (props) => {
     const squares = [];
     const freeTiles = renderFree(props.tile);
-
+    const grid = document.getElementById("board");
     const [, drop] = useDrop({
         accept: ItemTypes.free,
         canDrop: () => true,
         drop: (item: { type: string; tile: tileItem }, monitor) => {
             let x;
             let y;
-            const position = monitor.getDifferenceFromInitialOffset();
+            const positionDifference = monitor.getDifferenceFromInitialOffset();
+            const positionCurrent = monitor.getClientOffset();
+            let offset = null;
+            if (grid !== null) {
+                offset = grid.getBoundingClientRect();
+            }
             if (
                 item.tile.position[0] === -100 &&
-                item.tile.position[1] === -100
+                item.tile.position[1] === -100 &&
+                positionCurrent !== null &&
+                offset !== null
             ) {
-                x = 0;
-                y = 0;
-            } else if (position !== null) {
-                x = item.tile.position[0] + position.x / props.scale;
-                y = item.tile.position[1] + position.y / props.scale;
+                x = positionCurrent.x - offset.x;
+                y = positionCurrent.y - offset.y;
+            } else if (
+                positionDifference !== null &&
+                positionCurrent !== null
+            ) {
+                x = item.tile.position[0] + positionDifference.x / props.scale;
+                y = item.tile.position[1] + positionDifference.y / props.scale;
             } else {
                 x = 0;
                 y = 0;
             }
-            props.changeTile(
-                { ...item.tile, position: [x, y] }
-                // [
-                //     //monitor.getSourceClientOffset().x +
-                //     x,
-                //     //monitor.getSourceClientOffset().y +
-                //     y
-                // ],
-            );
+            props.changeTile({ ...item.tile, position: [x, y] });
         },
         collect: (monitor) => ({
             isOver: !!monitor.isOver(),

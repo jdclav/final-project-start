@@ -5,4 +5,7 @@ export interface tileItem {
     tags: string[];
     snap: string;
     src: string;
+    scale: number;
+    constScale: number;
+    orientation: number;
 }
