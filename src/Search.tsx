@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { tileItem } from "./interfaces";
 import Pic from "./Pic";
 import "./css/Search.css";
+import { Form } from "react-bootstrap";
 
 type listProps = {
     updateSelectTile: (tile: tileItem) => void;
@@ -16,7 +17,14 @@ const Search: React.FC<listProps> = (props) => {
 
     return (
         <div>
-            <input type="text" onChange={handleChange} />
+            <Form.Group className="search" controlId="searchbar">
+                <Form.Control
+                    value={search}
+                    onChange={handleChange}
+                    type="text"
+                    placeholder="Search..."
+                />
+            </Form.Group>
             <div className="list">
                 {sourceTiles.map((sortTile: tileItem, key: number) => {
                     if (
