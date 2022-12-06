@@ -14,7 +14,7 @@ const tileList: tileItem[] = [
         name: "Wood floor",
         tags: ["inside", "furniture"],
         snap: "snap",
-        src: "./images/woodFloor.jpg"
+        src: "./images/newFloor.jpg"
     },
     {
         id: -3,
@@ -133,7 +133,7 @@ const tileList: tileItem[] = [
         position: [-100, -100],
         name: "Grass",
         tags: ["outside", "plants", "road"],
-        snap: "free",
+        snap: "snap",
         src: "./images/grass.jpg"
     },
     {
@@ -170,11 +170,11 @@ const tileList: tileItem[] = [
     },
     {
         id: -22,
-        position: [0, 0],
-        name: "Path1",
-        tags: ["outside", "road"],
-        snap: "snap",
-        src: "./images/path.jpg"
+        position: [-100, -100],
+        name: "car",
+        tags: ["outside", "transportation"],
+        snap: "free",
+        src: "./images/car.jpg"
     },
     {
         id: -23,
@@ -186,10 +186,10 @@ const tileList: tileItem[] = [
     },
     {
         id: -24,
-        position: [0, 0],
+        position: [-100, -100],
         name: "Pillar",
         tags: ["inside", "outside", "furniture"],
-        snap: "snap",
+        snap: "free",
         src: "./images/pillar.jpg"
     },
     {
@@ -211,10 +211,10 @@ const tileList: tileItem[] = [
     {
         id: -27,
         position: [-100, -100],
-        name: "Rocks",
-        tags: ["outside", "stone"],
-        snap: "free",
-        src: "./images/rocks.png"
+        name: "water",
+        tags: ["outside", "water"],
+        snap: "snap",
+        src: "./images/water.jpg"
     },
     {
         id: -28,
@@ -234,11 +234,27 @@ const tileList: tileItem[] = [
     },
     {
         id: -30,
-        position: [0, 0],
-        name: "Path2",
+        position: [-100, -100],
+        name: "stair",
         tags: ["outside", "road"],
-        snap: "snap",
-        src: "./images/topPath.jpg"
+        snap: "free",
+        src: "./images/stairs.jpg"
+    },
+    {
+        id: -31,
+        position: [-100, -100],
+        name: "Chair2",
+        tags: ["outside", "road"],
+        snap: "free",
+        src: "./images/chair2.jpg"
+    },
+    {
+        id: -32,
+        position: [-100, -100],
+        name: "Cracks2",
+        tags: ["outside", "cracks"],
+        snap: "free",
+        src: "./images/cracks2.jpg"
     }
 ];
 export default tileList;
