@@ -17,7 +17,7 @@ const tileList: tileItem[] = [
         name: "Wood floor",
         tags: ["inside", "furniture"],
         snap: "snap",
-        src: "./images/woodFloor.jpg",
+        src: "./images/newFloor.jpg"
         scale: 1,
         constScale: 1,
         orientation: 0
@@ -124,10 +124,10 @@ const tileList: tileItem[] = [
     {
         id: -12,
         position: [-100, -100],
-        name: "Tree1",
+        name: "bed",
         tags: ["outside", "plants"],
         snap: "free",
-        src: "./images/tree.jpg",
+        src: "./images/bed.jpg"
         scale: 1,
         constScale: 1,
         orientation: 0
@@ -181,8 +181,8 @@ const tileList: tileItem[] = [
         position: [-100, -100],
         name: "Grass",
         tags: ["outside", "plants", "road"],
-        snap: "free",
-        src: "./images/grass.jpg",
+        snap: "snap",
+        src: "./images/grass.jpg"
         scale: 1,
         constScale: 1,
         orientation: 0
@@ -212,10 +212,10 @@ const tileList: tileItem[] = [
     {
         id: -20,
         position: [-100, -100],
-        name: "Paper",
+        name: "Table Lamp",
         tags: ["inside", "item"],
         snap: "free",
-        src: "./images/paper.jpg",
+        src: "./images/tableLamp.jpg"
         scale: 1,
         constScale: 1,
         orientation: 0
@@ -233,11 +233,11 @@ const tileList: tileItem[] = [
     },
     {
         id: -22,
-        position: [0, 0],
-        name: "Path1",
-        tags: ["outside", "road"],
-        snap: "snap",
-        src: "./images/path.jpg",
+        position: [-100, -100],
+        name: "car",
+        tags: ["outside", "transportation"],
+        snap: "free",
+        src: "./images/car.jpg"
         scale: 1,
         constScale: 1,
         orientation: 0
@@ -255,11 +255,11 @@ const tileList: tileItem[] = [
     },
     {
         id: -24,
-        position: [0, 0],
+        position: [-100, -100],
         name: "Pillar",
         tags: ["inside", "outside", "furniture"],
-        snap: "snap",
-        src: "./images/pillar.jpg",
+        snap: "free",
+        src: "./images/pillar.jpg"
         scale: 1,
         constScale: 1,
         orientation: 0
@@ -289,10 +289,10 @@ const tileList: tileItem[] = [
     {
         id: -27,
         position: [-100, -100],
-        name: "Rocks",
-        tags: ["outside", "stone"],
-        snap: "free",
-        src: "./images/rocks.png",
+        name: "water",
+        tags: ["outside", "water"],
+        snap: "snap",
+        src: "./images/water.jpg"
         scale: 1,
         constScale: 1,
         orientation: 0
@@ -321,11 +321,59 @@ const tileList: tileItem[] = [
     },
     {
         id: -30,
-        position: [0, 0],
-        name: "Path2",
+        position: [-100, -100],
+        name: "stair",
         tags: ["outside", "road"],
+        snap: "free",
+        src: "./images/stairs.jpg"
+    },
+    {
+        id: -31,
+        position: [-100, -100],
+        name: "Chair2",
+        tags: ["outside", "road"],
+        snap: "free",
+        src: "./images/chair2.jpg"
+    },
+    {
+        id: -32,
+        position: [-100, -100],
+        name: "Cracks2",
+        tags: ["outside", "cracks"],
+        snap: "free",
+        src: "./images/cracks2.jpg"
+    },
+    {
+        id: -33,
+        position: [-100, -100],
+        name: "Watermelon",
+        tags: ["outside", "inside", "fruits"],
+        snap: "free",
+        src: "./images/watermelon.jpg"
+    },
+    {
+        id: -34,
+        position: [-100, -100],
+        name: "Apple",
+        tags: ["outside", "inside", "fruits"],
+        snap: "free",
+        src: "./images/apple.jpg"
+    },
+    {
+        id: -35,
+        position: [-100, -100],
+        name: "Pillar",
+        tags: ["inside", "outside", "furniture"],
+        snap: "free",
+        src: "./images/pillar2.jpg"
+    },
+    {
+        id: -36,
+        position: [0, 0],
+        name: "floor",
+        tags: ["inside", "furniture"],
         snap: "snap",
-        src: "./images/topPath.jpg",
+        src: "./images/floor3.jpg",
         scale: 1,
         constScale: 1,
         orientation: 0
