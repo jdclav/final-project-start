@@ -17,7 +17,7 @@ const tileList: tileItem[] = [
         name: "Wood floor",
         tags: ["inside", "furniture"],
         snap: "snap",
-        src: "./images/newFloor.jpg"
+        src: "./images/newFloor.jpg",
         scale: 1,
         constScale: 1,
         orientation: 0
@@ -127,7 +127,7 @@ const tileList: tileItem[] = [
         name: "bed",
         tags: ["outside", "plants"],
         snap: "free",
-        src: "./images/bed.jpg"
+        src: "./images/bed.jpg",
         scale: 1,
         constScale: 1,
         orientation: 0
@@ -182,7 +182,7 @@ const tileList: tileItem[] = [
         name: "Grass",
         tags: ["outside", "plants", "road"],
         snap: "snap",
-        src: "./images/grass.jpg"
+        src: "./images/grass.jpg",
         scale: 1,
         constScale: 1,
         orientation: 0
@@ -215,7 +215,7 @@ const tileList: tileItem[] = [
         name: "Table Lamp",
         tags: ["inside", "item"],
         snap: "free",
-        src: "./images/tableLamp.jpg"
+        src: "./images/tableLamp.jpg",
         scale: 1,
         constScale: 1,
         orientation: 0
@@ -237,7 +237,7 @@ const tileList: tileItem[] = [
         name: "car",
         tags: ["outside", "transportation"],
         snap: "free",
-        src: "./images/car.jpg"
+        src: "./images/car.jpg",
         scale: 1,
         constScale: 1,
         orientation: 0
@@ -259,7 +259,7 @@ const tileList: tileItem[] = [
         name: "Pillar",
         tags: ["inside", "outside", "furniture"],
         snap: "free",
-        src: "./images/pillar.jpg"
+        src: "./images/pillar.jpg",
         scale: 1,
         constScale: 1,
         orientation: 0
@@ -292,7 +292,7 @@ const tileList: tileItem[] = [
         name: "water",
         tags: ["outside", "water"],
         snap: "snap",
-        src: "./images/water.jpg"
+        src: "./images/water.jpg",
         scale: 1,
         constScale: 1,
         orientation: 0
@@ -325,7 +325,10 @@ const tileList: tileItem[] = [
         name: "stair",
         tags: ["outside", "road"],
         snap: "free",
-        src: "./images/stairs.jpg"
+        src: "./images/stairs.jpg",
+        scale: 1,
+        constScale: 1,
+        orientation: 0
     },
     {
         id: -31,
@@ -333,7 +336,10 @@ const tileList: tileItem[] = [
         name: "Chair2",
         tags: ["outside", "road"],
         snap: "free",
-        src: "./images/chair2.jpg"
+        src: "./images/chair2.jpg",
+        scale: 1,
+        constScale: 1,
+        orientation: 0
     },
     {
         id: -32,
@@ -341,7 +347,10 @@ const tileList: tileItem[] = [
         name: "Cracks2",
         tags: ["outside", "cracks"],
         snap: "free",
-        src: "./images/cracks2.jpg"
+        src: "./images/cracks2.jpg",
+        scale: 1,
+        constScale: 1,
+        orientation: 0
     },
     {
         id: -33,
@@ -349,7 +358,10 @@ const tileList: tileItem[] = [
         name: "Watermelon",
         tags: ["outside", "inside", "fruits"],
         snap: "free",
-        src: "./images/watermelon.jpg"
+        src: "./images/watermelon.jpg",
+        scale: 1,
+        constScale: 1,
+        orientation: 0
     },
     {
         id: -34,
@@ -357,7 +369,10 @@ const tileList: tileItem[] = [
         name: "Apple",
         tags: ["outside", "inside", "fruits"],
         snap: "free",
-        src: "./images/apple.jpg"
+        src: "./images/apple.jpg",
+        scale: 1,
+        constScale: 1,
+        orientation: 0
     },
     {
         id: -35,
@@ -365,7 +380,10 @@ const tileList: tileItem[] = [
         name: "Pillar",
         tags: ["inside", "outside", "furniture"],
         snap: "free",
-        src: "./images/pillar2.jpg"
+        src: "./images/pillar2.jpg",
+        scale: 1,
+        constScale: 1,
+        orientation: 0
     },
     {
         id: -36,
