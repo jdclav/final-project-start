@@ -30,6 +30,8 @@ const App: React.FC = (): JSX.Element => {
                         updatePage={updatePage}
                         changeXSize={changeXSize}
                         changeYSize={changeYSize}
+                        xSize={xSize}
+                        ySize={ySize}
                     />
                 )) ||
                 (page === 2 && <DndScreen xSize={xSize} ySize={ySize} />)}
