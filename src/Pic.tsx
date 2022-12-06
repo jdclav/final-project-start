@@ -36,7 +36,6 @@ const Pic: React.FC<ObjectProp> = (props) => {
                 setRotation(
                     "rotate(" + (tile.orientation * 90).toString() + "deg)"
                 );
-                console.log(tile.orientation);
             }
         }
     });
