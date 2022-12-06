@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Button, Form } from "react-bootstrap";
 import { tileItem } from "./interfaces";
 
@@ -15,7 +15,7 @@ type listProps = {
 
 const TileEdit: React.FC<listProps> = (props) => {
     const { tile, tileList, resetMiddle, changeTile } = props;
-    let currentIndex = 0;
+    const [currentIndex, setCurrentIndex] = useState<number>(0);
     const updatePositionX = (event: React.ChangeEvent<HTMLInputElement>) => {
         if (tile !== null) {
             let value = parseInt(event.target.value);
@@ -86,10 +86,13 @@ const TileEdit: React.FC<listProps> = (props) => {
     };
     useEffect(() => {
         if (tile !== null) {
+            console.log(tile.id);
+            const test = tile.id;
             const index = tileList.findIndex(
-                (o: tileItem): boolean => o.id === tile.id
+                (o: tileItem): boolean => o.id === test
             );
-            currentIndex = index;
+            console.log(index);
+            setCurrentIndex(index);
         }
     });
     return (
