@@ -91,10 +91,10 @@ const tileList: tileItem[] = [
     {
         id: -12,
         position: [-100, -100],
-        name: "Tree1",
+        name: "bed",
         tags: ["outside", "plants"],
         snap: "free",
-        src: "./images/tree.jpg"
+        src: "./images/bed.jpg"
     },
     {
         id: -13,
