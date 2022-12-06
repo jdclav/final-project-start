@@ -57,6 +57,4 @@
 .rightbar {
     width: 20vw;
     display: inline-block;
-    overflow-y: auto;
-    height: 1000px;
 }

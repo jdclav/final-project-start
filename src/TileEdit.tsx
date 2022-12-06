@@ -1,16 +1,97 @@
-import React from "react";
-import { Button /*Form*/ } from "react-bootstrap";
+import React, { useEffect } from "react";
+import { Button, Form } from "react-bootstrap";
 import { tileItem } from "./interfaces";
+
+const xIndex = 0;
+const yIndex = 1;
 
 type listProps = {
     tile: tileItem | null;
     tileList: tileItem[];
     resetMiddle: () => void;
-    updateTile: (tile: tileItem) => void;
+    changeTile: (tile: tileItem) => void;
     //deleteTile: (index: number) => void;
 };
 
 const TileEdit: React.FC<listProps> = (props) => {
+    const { tile, tileList, resetMiddle, changeTile } = props;
+    let currentIndex = 0;
+    const updatePositionX = (event: React.ChangeEvent<HTMLInputElement>) => {
+        if (tile !== null) {
+            let value = parseInt(event.target.value);
+            if (isNaN(value)) {
+                value = 0;
+            }
+            const index = tileList.findIndex(
+                (o: tileItem): boolean => o.id === tile.id
+            );
+            const newTile: tileItem = {
+                ...tileList[index],
+                position: [value, tileList[index].position[yIndex]]
+            };
+
+            changeTile(newTile);
+        }
+    };
+    const updatePositionY = (event: React.ChangeEvent<HTMLInputElement>) => {
+        if (tile !== null) {
+            let value = parseInt(event.target.value);
+            if (isNaN(value)) {
+                value = 0;
+            }
+            const index = tileList.findIndex(
+                (o: tileItem): boolean => o.id === tile.id
+            );
+            const newTile: tileItem = {
+                ...tileList[index],
+                position: [tileList[index].position[xIndex], value]
+            };
+
+            changeTile(newTile);
+        }
+    };
+    const updateScale = (event: React.ChangeEvent<HTMLInputElement>) => {
+        if (tile !== null) {
+            let value = parseFloat(event.target.value);
+            if (isNaN(value)) {
+                value = 0;
+            }
+            const index = tileList.findIndex(
+                (o: tileItem): boolean => o.id === tile.id
+            );
+            const newTile: tileItem = {
+                ...tileList[index],
+                scale: value
+            };
+
+            changeTile(newTile);
+        }
+    };
+    const updateOrientation = (event: React.ChangeEvent<HTMLInputElement>) => {
+        if (tile !== null) {
+            let value = parseInt(event.target.value);
+            if (isNaN(value)) {
+                value = 0;
+            }
+            const index = tileList.findIndex(
+                (o: tileItem): boolean => o.id === tile.id
+            );
+            const newTile: tileItem = {
+                ...tileList[index],
+                orientation: value
+            };
+
+            changeTile(newTile);
+        }
+    };
+    useEffect(() => {
+        if (tile !== null) {
+            const index = tileList.findIndex(
+                (o: tileItem): boolean => o.id === tile.id
+            );
+            currentIndex = index;
+        }
+    });
     return (
         <div>
             <div
@@ -20,9 +101,35 @@ const TileEdit: React.FC<listProps> = (props) => {
                     height: "10vw"
                 }}
             >
-                <Button className="resetMiddle" onClick={props.resetMiddle}>
+                <Button className="resetMiddle" onClick={resetMiddle}>
                     Done
                 </Button>
+                <Form.Group>
+                    <Form.Label>X Coordinate</Form.Label>
+                    <Form.Control
+                        type="number"
+                        value={tileList[currentIndex].position[xIndex]}
+                        onChange={updatePositionX}
+                    />
+                    <Form.Label>Y Coordinate</Form.Label>
+                    <Form.Control
+                        type="number"
+                        value={tileList[currentIndex].position[yIndex]}
+                        onChange={updatePositionY}
+                    />
+                    <Form.Label>Size</Form.Label>
+                    <Form.Control
+                        type="number"
+                        value={tileList[currentIndex].scale}
+                        onChange={updateScale}
+                    />
+                    <Form.Label>Orientation</Form.Label>
+                    <Form.Control
+                        type="number"
+                        value={tileList[currentIndex].orientation}
+                        onChange={updateOrientation}
+                    />
+                </Form.Group>
             </div>
         </div>
     );
