@@ -6,30 +6,30 @@ Browserslist: caniuse-lite is outdated. Please run:
   npx browserslist@latest --update-db
   Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
 PASS src/tests/App.test.tsx
-  ✓ renders the course name somewhere (28 ms)
+  ✓ renders the course name somewhere (42 ms)
 
 --------------------|---------|----------|---------|---------|-----------------------
 File                | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s     
 --------------------|---------|----------|---------|---------|-----------------------
-All files           |   21.34 |     3.63 |    3.38 |   22.01 |                       
- src                |   20.85 |     3.63 |    3.38 |   21.51 |                       
+All files           |   17.53 |     2.73 |    2.89 |   17.96 |                       
+ src                |   17.14 |     2.73 |    2.89 |   17.56 |                       
   App.tsx           |   72.72 |    33.33 |      25 |   72.72 | 16,19,22              
   Board.tsx         |      20 |        0 |       0 |   21.42 | 15,23-30,41,51,77-140 
   BoardSquare.tsx   |   14.28 |        0 |       0 |   14.28 | 15-26                 
-  CreateScreen.tsx  |      25 |      100 |       0 |      25 | 12-22                 
+  CreateScreen.tsx  |      25 |      100 |       0 |      25 | 14-26                 
   DeleteBin.tsx     |   16.66 |        0 |       0 |   16.66 | 12-22                 
   DndScreen.tsx     |       4 |        0 |       0 |    4.34 | 23-68                 
-  GridEdit.tsx      |   33.33 |      100 |       0 |   33.33 | 10-12                 
+  GridEdit.tsx      |   33.33 |      100 |       0 |   33.33 | 12-14                 
   ImageDownload.tsx |      10 |        0 |       0 |      10 | 7-24                  
   OpenScreen.tsx    |   66.66 |      100 |      50 |   66.66 | 20                    
   Overlay.tsx       |      50 |      100 |       0 |      50 | 8                     
-  Pic.tsx           |    5.55 |        0 |       0 |    5.55 | 14-44                 
+  Pic.tsx           |    5.88 |        0 |       0 |    5.88 | 14-43                 
   Rightbar.tsx      |   33.33 |      100 |       0 |   33.33 | 18-19                 
   Search.tsx        |   11.11 |        0 |       0 |   11.11 | 12-53                 
   SortName.tsx      |   16.66 |      100 |       0 |   16.66 | 12-18                 
   SortSnap.tsx      |   16.66 |      100 |       0 |   16.66 | 12-18                 
   Square.tsx        |      50 |      100 |       0 |      50 | 4                     
-  TileEdit.tsx      |      50 |      100 |       0 |      50 | 15                    
+  TileEdit.tsx      |       6 |        0 |       0 |       6 | 17-98                 
   constants.ts      |     100 |      100 |     100 |     100 |                       
   interfaces.ts     |       0 |        0 |       0 |       0 |                       
  src/images         |     100 |      100 |     100 |     100 |                       
@@ -38,5 +38,5 @@ All files           |   21.34 |     3.63 |    3.38 |   22.01 |
 Test Suites: 1 passed, 1 total
 Tests:       1 passed, 1 total
 Snapshots:   0 total
-Time:        2.564 s
+Time:        4.258 s
 Ran all test suites.
