@@ -155,10 +155,10 @@ const tileList: tileItem[] = [
     {
         id: -20,
         position: [-100, -100],
-        name: "Paper",
+        name: "Table Lamp",
         tags: ["inside", "item"],
         snap: "free",
-        src: "./images/paper.jpg"
+        src: "./images/tableLamp.jpg"
     },
     {
         id: -21,
@@ -255,6 +255,38 @@ const tileList: tileItem[] = [
         tags: ["outside", "cracks"],
         snap: "free",
         src: "./images/cracks2.jpg"
+    },
+    {
+        id: -33,
+        position: [-100, -100],
+        name: "Watermelon",
+        tags: ["outside", "inside", "fruits"],
+        snap: "free",
+        src: "./images/watermelon.jpg"
+    },
+    {
+        id: -34,
+        position: [-100, -100],
+        name: "Apple",
+        tags: ["outside", "inside", "fruits"],
+        snap: "free",
+        src: "./images/apple.jpg"
+    },
+    {
+        id: -35,
+        position: [-100, -100],
+        name: "Pillar",
+        tags: ["inside", "outside", "furniture"],
+        snap: "free",
+        src: "./images/pillar2.jpg"
+    },
+    {
+        id: -36,
+        position: [0, 0],
+        name: "floor",
+        tags: ["inside", "furniture"],
+        snap: "snap",
+        src: "./images/floor3.jpg"
     }
 ];
 export default tileList;
