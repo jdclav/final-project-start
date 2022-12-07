@@ -9,7 +9,8 @@ const tileList: tileItem[] = [
         src: "./images/barrel.jpg",
         scale: 1,
         constScale: 1,
-        orientation: 0
+        orientation: 0,
+        offset: 0
     },
     {
         id: -2,
@@ -20,7 +21,8 @@ const tileList: tileItem[] = [
         src: "./images/newFloor.jpg",
         scale: 1,
         constScale: 1,
-        orientation: 0
+        orientation: 0,
+        offset: 0
     },
     {
         id: -3,
@@ -31,7 +33,8 @@ const tileList: tileItem[] = [
         src: "./images/burger.jpg",
         scale: 1,
         constScale: 0.5,
-        orientation: 0
+        orientation: 0,
+        offset: 0
     },
     {
         id: -4,
@@ -42,7 +45,8 @@ const tileList: tileItem[] = [
         src: "./images/bushes.jpg",
         scale: 1,
         constScale: 1,
-        orientation: 0
+        orientation: 0,
+        offset: 0
     },
     {
         id: -5,
@@ -53,7 +57,8 @@ const tileList: tileItem[] = [
         src: "./images/candle.jpg",
         scale: 1,
         constScale: 1,
-        orientation: 0
+        orientation: 0,
+        offset: 0
     },
     {
         id: -6,
@@ -64,7 +69,8 @@ const tileList: tileItem[] = [
         src: "./images/window.jpg",
         scale: 1,
         constScale: 1,
-        orientation: 0
+        orientation: 0,
+        offset: 0
     },
     {
         id: -7,
@@ -75,7 +81,8 @@ const tileList: tileItem[] = [
         src: "./images/chair.jpg",
         scale: 1,
         constScale: 1,
-        orientation: 0
+        orientation: 0,
+        offset: 0
     },
     {
         id: -8,
@@ -86,7 +93,8 @@ const tileList: tileItem[] = [
         src: "./images/chest.jpg",
         scale: 1,
         constScale: 1,
-        orientation: 0
+        orientation: 0,
+        offset: 0
     },
     {
         id: -9,
@@ -97,7 +105,8 @@ const tileList: tileItem[] = [
         src: "./images/Chrysanthemum.jpg",
         scale: 1,
         constScale: 1,
-        orientation: 0
+        orientation: 0,
+        offset: 0
     },
     {
         id: -10,
@@ -108,7 +117,8 @@ const tileList: tileItem[] = [
         src: "./images/cracks.jpg",
         scale: 1,
         constScale: 1,
-        orientation: 0
+        orientation: 0,
+        offset: 0
     },
     {
         id: -11,
@@ -119,7 +129,8 @@ const tileList: tileItem[] = [
         src: "./images/crate.jpg",
         scale: 1,
         constScale: 1,
-        orientation: 0
+        orientation: 0,
+        offset: 0
     },
     {
         id: -12,
@@ -130,7 +141,8 @@ const tileList: tileItem[] = [
         src: "./images/bed.jpg",
         scale: 1,
         constScale: 1,
-        orientation: 0
+        orientation: 0,
+        offset: 0
     },
     {
         id: -13,
@@ -141,7 +153,8 @@ const tileList: tileItem[] = [
         src: "./images/door.jpg",
         scale: 1,
         constScale: 1,
-        orientation: 0
+        orientation: 0,
+        offset: 0
     },
     {
         id: -14,
@@ -152,7 +165,8 @@ const tileList: tileItem[] = [
         src: "./images/flag.jpg",
         scale: 1,
         constScale: 1,
-        orientation: 0
+        orientation: 0,
+        offset: 0
     },
     {
         id: -15,
@@ -163,7 +177,8 @@ const tileList: tileItem[] = [
         src: "./images/floor.jpg",
         scale: 1,
         constScale: 1,
-        orientation: 0
+        orientation: 0,
+        offset: 0
     },
     {
         id: -16,
@@ -174,7 +189,8 @@ const tileList: tileItem[] = [
         src: "./images/goldCoin.jpg",
         scale: 1,
         constScale: 1,
-        orientation: 0
+        orientation: 0,
+        offset: 0
     },
     {
         id: -17,
@@ -185,7 +201,8 @@ const tileList: tileItem[] = [
         src: "./images/grass.jpg",
         scale: 1,
         constScale: 1,
-        orientation: 0
+        orientation: 0,
+        offset: 0
     },
     {
         id: -18,
@@ -196,7 +213,8 @@ const tileList: tileItem[] = [
         src: "./images/greenTree.jpg",
         scale: 1,
         constScale: 1,
-        orientation: 0
+        orientation: 0,
+        offset: 0
     },
     {
         id: -19,
@@ -207,7 +225,8 @@ const tileList: tileItem[] = [
         src: "./images/hugeStone.jpg",
         scale: 1,
         constScale: 1,
-        orientation: 0
+        orientation: 0,
+        offset: 0
     },
     {
         id: -20,
@@ -218,7 +237,8 @@ const tileList: tileItem[] = [
         src: "./images/tableLamp.jpg",
         scale: 1,
         constScale: 1,
-        orientation: 0
+        orientation: 0,
+        offset: 0
     },
     {
         id: -21,
@@ -229,7 +249,8 @@ const tileList: tileItem[] = [
         src: "./images/pasta.jpg",
         scale: 1,
         constScale: 1,
-        orientation: 0
+        orientation: 0,
+        offset: 0
     },
     {
         id: -22,
@@ -240,7 +261,8 @@ const tileList: tileItem[] = [
         src: "./images/car.jpg",
         scale: 1,
         constScale: 1,
-        orientation: 0
+        orientation: 0,
+        offset: 0
     },
     {
         id: -23,
@@ -251,7 +273,8 @@ const tileList: tileItem[] = [
         src: "./images/pen.jpg",
         scale: 1,
         constScale: 1,
-        orientation: 0
+        orientation: 0,
+        offset: 0
     },
     {
         id: -24,
@@ -262,7 +285,8 @@ const tileList: tileItem[] = [
         src: "./images/pillar.jpg",
         scale: 1,
         constScale: 1,
-        orientation: 0
+        orientation: 0,
+        offset: 0
     },
     {
         id: -25,
@@ -273,7 +297,8 @@ const tileList: tileItem[] = [
         src: "./images/pizza.jpg",
         scale: 1,
         constScale: 1,
-        orientation: 0
+        orientation: 0,
+        offset: 0
     },
     {
         id: -26,
@@ -284,7 +309,8 @@ const tileList: tileItem[] = [
         src: "./images/redFlowers.jpg",
         scale: 1,
         constScale: 1,
-        orientation: 0
+        orientation: 0,
+        offset: 0
     },
     {
         id: -27,
@@ -295,7 +321,8 @@ const tileList: tileItem[] = [
         src: "./images/water.jpg",
         scale: 1,
         constScale: 1,
-        orientation: 0
+        orientation: 0,
+        offset: 0
     },
     {
         id: -28,
@@ -306,7 +333,8 @@ const tileList: tileItem[] = [
         src: "./images/stone.jpg",
         scale: 1,
         constScale: 1,
-        orientation: 0
+        orientation: 0,
+        offset: 0
     },
     {
         id: -29,
@@ -317,7 +345,8 @@ const tileList: tileItem[] = [
         src: "./images/table.jpg",
         scale: 1,
         constScale: 1,
-        orientation: 0
+        orientation: 0,
+        offset: 0
     },
     {
         id: -30,
@@ -328,7 +357,8 @@ const tileList: tileItem[] = [
         src: "./images/stairs.jpg",
         scale: 1,
         constScale: 1,
-        orientation: 0
+        orientation: 0,
+        offset: 0
     },
     {
         id: -31,
@@ -339,7 +369,8 @@ const tileList: tileItem[] = [
         src: "./images/chair2.jpg",
         scale: 1,
         constScale: 1,
-        orientation: 0
+        orientation: 0,
+        offset: 0
     },
     {
         id: -32,
@@ -350,7 +381,8 @@ const tileList: tileItem[] = [
         src: "./images/cracks2.jpg",
         scale: 1,
         constScale: 1,
-        orientation: 0
+        orientation: 0,
+        offset: 0
     },
     {
         id: -33,
@@ -361,7 +393,8 @@ const tileList: tileItem[] = [
         src: "./images/watermelon.jpg",
         scale: 1,
         constScale: 1,
-        orientation: 0
+        orientation: 0,
+        offset: 0
     },
     {
         id: -34,
@@ -372,7 +405,8 @@ const tileList: tileItem[] = [
         src: "./images/apple.jpg",
         scale: 1,
         constScale: 1,
-        orientation: 0
+        orientation: 0,
+        offset: 0
     },
     {
         id: -35,
@@ -383,7 +417,8 @@ const tileList: tileItem[] = [
         src: "./images/pillar2.jpg",
         scale: 1,
         constScale: 1,
-        orientation: 0
+        orientation: 0,
+        offset: 0
     },
     {
         id: -36,
@@ -394,7 +429,8 @@ const tileList: tileItem[] = [
         src: "./images/floor3.jpg",
         scale: 1,
         constScale: 1,
-        orientation: 0
+        orientation: 0,
+        offset: 0
     }
 ];
 export default tileList;

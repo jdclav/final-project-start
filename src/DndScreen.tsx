@@ -104,6 +104,7 @@ const DndScreen: React.FC<screenProps> = (props) => {
                             xSize={xSize}
                             ySize={ySize}
                             changeTile={changeTile}
+                            tileList={tiles}
                         ></Rightbar>
                     )) ||
                         (middleClick && (

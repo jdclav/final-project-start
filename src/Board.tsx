@@ -50,6 +50,7 @@ const Board: React.FC<BoardProps> = (props) => {
                     scale={defaultScale}
                     updateSelectTile={updateSelectTile}
                     changeTile={changeTile}
+                    tileList={tile}
                 />
             );
         }
@@ -152,6 +153,7 @@ const Board: React.FC<BoardProps> = (props) => {
                             scale={(5 * defaultScale) / x}
                             updateSelectTile={updateSelectTile}
                             changeTile={changeTile}
+                            tileList={tile}
                         />
                     </div>
                 );

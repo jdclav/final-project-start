@@ -8,9 +8,10 @@ type listProps = {
     updateSelectTile: (tile: tileItem) => void;
     sourceTiles: tileItem[];
     changeTile: (tile: tileItem) => void;
+    tileList: tileItem[];
 };
 const Search: React.FC<listProps> = (props) => {
-    const { updateSelectTile, sourceTiles, changeTile } = props;
+    const { updateSelectTile, sourceTiles, changeTile, tileList } = props;
     const [search, setSearch] = useState<string>("");
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         setSearch(e.target.value);
@@ -48,6 +49,7 @@ const Search: React.FC<listProps> = (props) => {
                                     scale={100}
                                     updateSelectTile={updateSelectTile}
                                     changeTile={changeTile}
+                                    tileList={tileList}
                                 />
                             </div>
                         );
