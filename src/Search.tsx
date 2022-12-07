@@ -16,6 +16,8 @@ const getTags = (tiles: tileItem[]): string[] => {
     return output;
 };
 
+//const includesList = (a: string[], b: )
+
 type listProps = {
     updateSelectTile: (tile: tileItem) => void;
     sourceTiles: tileItem[];
@@ -63,10 +65,12 @@ const Search: React.FC<listProps> = (props) => {
             <div className="list">
                 {sourceTiles.map((sortTile: tileItem, key: number) => {
                     if (
-                        search === "" ||
-                        sortTile.name
-                            .toLowerCase()
-                            .includes(search.toLowerCase())
+                        ((search === "" ||
+                            sortTile.name
+                                .toLowerCase()
+                                .includes(search.toLowerCase())) &&
+                            sortTile.tags.some((r) => tags.includes(r))) ||
+                        tags.length === 0
                     ) {
                         return (
                             <div

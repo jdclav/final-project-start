@@ -10,11 +10,20 @@ type ObjectProp = {
 };
 
 const TagModal: React.FC<ObjectProp> = (props) => {
-    const { show, updateShow } = props;
+    const { show, updateShow, allTags, tags, updateTags } = props;
 
     const close = () => updateShow(false);
     const saveClose = () => {
         updateShow(false);
+    };
+
+    const checkTags = (event: React.ChangeEvent<HTMLInputElement>) => {
+        const tag = event.target.value;
+        if (tags.includes(tag)) {
+            updateTags(tags.filter((e) => e !== tag));
+        } else {
+            updateTags([...tags, tag]);
+        }
     };
 
     return (
@@ -24,7 +33,23 @@ const TagModal: React.FC<ObjectProp> = (props) => {
                     <Modal.Title>Tag Filter</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
-                    <Form.Group controlId="tag_select"></Form.Group>
+                    <Form.Group controlId="tag_select">
+                        {allTags.map((tag: string, key: number) => {
+                            return (
+                                <Form.Check
+                                    inline
+                                    key={key}
+                                    type="checkbox"
+                                    id={tag}
+                                    label={tag}
+                                    name={tag}
+                                    value={tag}
+                                    checked={tags.includes(tag)}
+                                    onChange={checkTags}
+                                />
+                            );
+                        })}
+                    </Form.Group>
                 </Modal.Body>
                 <Modal.Footer>
                     <Button variant="primary" onClick={saveClose}>
