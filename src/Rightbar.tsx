@@ -18,6 +18,7 @@ type listProps = {
     changeYSize: (event: React.ChangeEvent<HTMLInputElement>) => void;
     xSize: number;
     ySize: number;
+    changeTile: (tile: tileItem) => void;
 };
 
 const Rightbar: React.FC<listProps> = (props) => {
@@ -29,7 +30,8 @@ const Rightbar: React.FC<listProps> = (props) => {
         changeXSize,
         changeYSize,
         xSize,
-        ySize
+        ySize,
+        changeTile
     } = props;
     const [gridEdit, setGridEdit] = useState<boolean>(false);
     return (
@@ -86,6 +88,7 @@ const Rightbar: React.FC<listProps> = (props) => {
                         <Search
                             updateSelectTile={updateSelectTile}
                             sourceTiles={sourceTiles}
+                            changeTile={changeTile}
                         ></Search>
                     </div>
                 </div>

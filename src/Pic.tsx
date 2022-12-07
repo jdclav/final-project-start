@@ -8,6 +8,7 @@ type ObjectProp = {
     tile: tileItem;
     scale: number;
     updateSelectTile: (tile: tileItem) => void;
+    changeTile: (tile: tileItem) => void;
 };
 
 const Pic: React.FC<ObjectProp> = (props) => {
