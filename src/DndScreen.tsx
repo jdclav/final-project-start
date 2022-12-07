@@ -15,12 +15,14 @@ import tileList from "./images/tileList";
 import { tileItem } from "./interfaces";
 
 type screenProps = {
+    changeXSize: (event: React.ChangeEvent<HTMLInputElement>) => void;
+    changeYSize: (event: React.ChangeEvent<HTMLInputElement>) => void;
     xSize: number;
     ySize: number;
 };
 
 const DndScreen: React.FC<screenProps> = (props) => {
-    const { xSize, ySize } = props;
+    const { xSize, ySize, changeXSize, changeYSize } = props;
     const [tiles, setTiles] = useState<tileItem[]>([]);
     const [scale, setScale] = useState<number>(1);
     const [middleClick, setMiddleClick] = useState<boolean>(false);
@@ -97,6 +99,10 @@ const DndScreen: React.FC<screenProps> = (props) => {
                             sourceTiles={sourceTile}
                             deleteTile={deleteTile}
                             updateSelectTile={updateSelectTile}
+                            changeXSize={changeXSize}
+                            changeYSize={changeYSize}
+                            xSize={xSize}
+                            ySize={ySize}
                         ></Rightbar>
                     )) ||
                         (middleClick && (

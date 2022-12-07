@@ -15,7 +15,7 @@ const Pic: React.FC<ObjectProp> = (props) => {
     const [totalScale, setTotalScale] = useState<number>(100);
     const [rotation, setRotation] = useState<string>("rotate(0deg)");
     const [{ isDragging }, drag] = useDrag({
-        item: { type: props.tile.snap, tile: props.tile },
+        item: { type: tile.snap, tile: tile },
         collect: (monitor) => ({
             isDragging: !!monitor.isDragging
         })
