@@ -8,14 +8,23 @@ type ObjectProp = {
     tile: tileItem;
     scale: number;
     updateSelectTile: (tile: tileItem) => void;
+    changeTile: (tile: tileItem) => void;
+    tileList: tileItem[];
 };
 
 const Pic: React.FC<ObjectProp> = (props) => {
-    const { tile, scale, updateSelectTile } = props;
+    const { tile, scale, updateSelectTile, changeTile, tileList } = props;
     const [totalScale, setTotalScale] = useState<number>(100);
     const [rotation, setRotation] = useState<string>("rotate(0deg)");
+    const [windowSize, setWindowSize] = useState<number>(window.innerWidth);
+    const [prevWindowSize, setPrevWindowSize] = useState<number>(
+        window.innerWidth
+    );
+    const [width, setWidth] = useState<number>(500 / scale);
+    const [prevWidth, setPrevWidth] = useState<number>(500 / scale);
+    const [scaleString, setScaleString] = useState<string>("");
     const [{ isDragging }, drag] = useDrag({
-        item: { type: props.tile.snap, tile: props.tile },
+        item: { type: tile.snap, tile: tile },
         collect: (monitor) => ({
             isDragging: !!monitor.isDragging
         })
@@ -29,16 +38,61 @@ const Pic: React.FC<ObjectProp> = (props) => {
 
     useEffect(() => {
         if (tile.id >= 0) {
-            setTotalScale(scale * tile.scale * tile.constScale);
+            const updateWindowWidth = () => {
+                setWindowSize(window.innerWidth);
+            };
+            window.addEventListener("resize", updateWindowWidth);
+            setTotalScale(
+                scale * tile.scale * tile.constScale * (windowSize / 1200)
+            );
             if (tile.snap === "free") {
                 setRotation("rotate(" + tile.orientation.toString() + "deg)");
+                setScaleString(totalScale.toString() + "px");
             } else {
                 setRotation(
                     "rotate(" + (tile.orientation * 90).toString() + "deg)"
                 );
+                setScaleString("100%");
             }
+            setWidth(500 / scale);
+            setPrevWindowSize(windowSize);
         }
     });
+    useEffect(() => {
+        if (tile.snap === "free") {
+            const xPosition = tile.position[0];
+            const yPosition = tile.position[1];
+            const xPositionNew = (xPosition * prevWidth) / width;
+            const yPositionNew = (yPosition * prevWidth) / width;
+            const index = tileList.findIndex(
+                (o: tileItem): boolean => o.id === tile.id
+            );
+            const newTile: tileItem = {
+                ...tileList[index],
+                position: [xPositionNew, yPositionNew]
+            };
+            changeTile(newTile);
+            setPrevWidth(width);
+        }
+    }, [width]);
+
+    useEffect(() => {
+        if (tile.snap === "free") {
+            const xPosition = tile.position[0];
+            const yPosition = tile.position[1];
+            const xPositionNew = (xPosition * windowSize) / prevWindowSize;
+            const yPositionNew = (yPosition * windowSize) / prevWindowSize;
+            const index = tileList.findIndex(
+                (o: tileItem): boolean => o.id === tile.id
+            );
+            const newTile: tileItem = {
+                ...tileList[index],
+                position: [xPositionNew, yPositionNew]
+            };
+            changeTile(newTile);
+            setPrevWidth(width);
+        }
+    }, [windowSize]);
 
     return (
         <div
@@ -50,16 +104,13 @@ const Pic: React.FC<ObjectProp> = (props) => {
                 fontWeight: "bold",
                 cursor: "move",
                 textAlign: "center",
-                transform: rotation
+                transform: rotation,
+                width: scaleString,
+                height: scaleString
             }}
         >
-            <img
-                src={require("" + tile.src)}
-                width={totalScale + "%"}
-                height={totalScale + "%"}
-            />
+            <img src={require("" + tile.src)} width="100%" height="100%" />
         </div>
     );
 };
-
 export default Pic;

@@ -86,12 +86,10 @@ const TileEdit: React.FC<listProps> = (props) => {
     };
     useEffect(() => {
         if (tile !== null) {
-            console.log(tile.id);
             const test = tile.id;
             const index = tileList.findIndex(
                 (o: tileItem): boolean => o.id === test
             );
-            console.log(index);
             setCurrentIndex(index);
         }
     });

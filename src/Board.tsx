@@ -14,55 +14,8 @@ const sourcePosition = -100;
 const genKey = (x: number, y: number): number =>
     ((x + y) * (x + y + 1)) / 2 + x;
 
-const renderPiece = (
-    x: number,
-    y: number,
-    tiles: tileItem[],
-    updateSelectTile: (tile: tileItem) => void
-) => {
-    const location = tiles.filter(
-        (o: tileItem): boolean =>
-            x === o.position[xIndex] &&
-            y === o.position[yIndex] &&
-            o.snap === "snap"
-    );
-    if (location.length > 0) {
-        return (
-            <Pic
-                tile={location[0]}
-                scale={defaultScale}
-                updateSelectTile={updateSelectTile}
-            />
-        );
-    }
-};
-
 const renderFree = (tiles: tileItem[]): tileItem[] =>
     tiles.filter((o: tileItem): boolean => o.snap === "free");
-const renderSquare = (
-    x: number,
-    y: number,
-    tiles: tileItem[],
-    changeTile: (tile: tileItem) => void,
-    width: number,
-    height: number,
-    updateSelectTile: (tile: tileItem) => void
-) => {
-    return (
-        <div
-            className="square"
-            key={genKey(x, y)}
-            style={{
-                width: defaultScale / width + "%",
-                height: defaultScale / height + "%"
-            }}
-        >
-            <BoardSquare x={x} y={y} changeTile={changeTile}>
-                {renderPiece(x, y, tiles, updateSelectTile)}
-            </BoardSquare>
-        </div>
-    );
-};
 
 type BoardProps = {
     tile: tileItem[];
@@ -78,6 +31,54 @@ const Board: React.FC<BoardProps> = (props) => {
     const squares = [];
     const freeTiles = renderFree(tile);
     const grid = document.getElementById("board");
+    const renderPiece = (
+        x: number,
+        y: number,
+        tiles: tileItem[],
+        updateSelectTile: (tile: tileItem) => void
+    ) => {
+        const location = tiles.filter(
+            (o: tileItem): boolean =>
+                x === o.position[xIndex] &&
+                y === o.position[yIndex] &&
+                o.snap === "snap"
+        );
+        if (location.length > 0) {
+            return (
+                <Pic
+                    tile={location[0]}
+                    scale={defaultScale}
+                    updateSelectTile={updateSelectTile}
+                    changeTile={changeTile}
+                    tileList={tile}
+                />
+            );
+        }
+    };
+    const renderSquare = (
+        x: number,
+        y: number,
+        tiles: tileItem[],
+        changeTile: (tile: tileItem) => void,
+        width: number,
+        height: number,
+        updateSelectTile: (tile: tileItem) => void
+    ) => {
+        return (
+            <div
+                className="square"
+                key={genKey(x, y)}
+                style={{
+                    width: defaultScale / width + "%",
+                    height: defaultScale / height + "%"
+                }}
+            >
+                <BoardSquare x={x} y={y} changeTile={changeTile}>
+                    {renderPiece(x, y, tiles, updateSelectTile)}
+                </BoardSquare>
+            </div>
+        );
+    };
     const [, drop] = useDrop({
         accept: ItemTypes.free,
         canDrop: () => true,
@@ -151,6 +152,8 @@ const Board: React.FC<BoardProps> = (props) => {
                             tile={o}
                             scale={(5 * defaultScale) / x}
                             updateSelectTile={updateSelectTile}
+                            changeTile={changeTile}
+                            tileList={tile}
                         />
                     </div>
                 );
