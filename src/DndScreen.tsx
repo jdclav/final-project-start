@@ -13,6 +13,7 @@ import { DndProvider } from "react-dnd";
 import TileEdit from "./TileEdit";
 import tileList from "./images/tileList";
 import { tileItem } from "./interfaces";
+import "./css/DndScreen.css";
 
 type screenProps = {
     changeXSize: (event: React.ChangeEvent<HTMLInputElement>) => void;
@@ -28,12 +29,14 @@ const DndScreen: React.FC<screenProps> = (props) => {
     const [middleClick, setMiddleClick] = useState<boolean>(false);
     const [selectTile, setSelectTile] = useState<tileItem | null>(null);
     const [sourceTile, setSourceTile] = useState<tileItem[]>(tileList);
+    // const [setCounter] = useState<number | null>(selectTile.counter)
+
     const deleteTile = (index: number) => {
         setTiles(tiles.filter((tile: tileItem): boolean => tile.id !== index));
     };
 
-    const updateSourceTile = (tiles: tileItem[]) => {
-        setSourceTile(tiles);
+    const updateSourceTile = (tile: tileItem[]) => {
+        setSourceTile(tile);
     };
 
     const resetMiddle = () => {
@@ -76,6 +79,18 @@ const DndScreen: React.FC<screenProps> = (props) => {
             );
         }
     };
+
+    // const updateCounter = (tile: tileItem) => {};
+
+    const totalImg = tiles.length;
+
+    // const updateCounter = (tile: tileItem) => {
+    //     sourceTile.map(
+    //         (o: tileItem): tileItem =>
+    //             o.src === tile.src ? { ...o, counter: o.counter + 1 } : o
+    //     );
+    // };
+
     return (
         <div className="dndpage">
             <DndProvider backend={HTML5Backend}>
@@ -87,6 +102,7 @@ const DndScreen: React.FC<screenProps> = (props) => {
                             setScale(ref.state.scale)
                         }
                     >
+                        <div className="totalImg">Total Drop: {totalImg}</div>
                         <TransformComponent>
                             <div
                                 className="grid"
@@ -110,6 +126,8 @@ const DndScreen: React.FC<screenProps> = (props) => {
                     </TransformWrapper>
                 </div>
                 <div className="rightbar">
+                    {/* New tile :{updateCounter} */}
+                    {/* {sourceTile.map((tile: tileItem): number => tile.counter)} */}
                     {(!middleClick && (
                         <Rightbar
                             updateSourceTile={updateSourceTile}
@@ -130,6 +148,8 @@ const DndScreen: React.FC<screenProps> = (props) => {
                                 tileList={tiles}
                                 resetMiddle={resetMiddle}
                                 changeTile={changeTile}
+                                sourceTile={sourceTile}
+                                updateSourceTile={updateSourceTile}
                             />
                         ))}
                 </div>

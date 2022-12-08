@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import { useDrag } from "react-dnd";
 import { tileItem } from "./interfaces";
 import "./css/Button.css";
+// import tileList from "./images/tileList";
 
 type ObjectProp = {
     tile: tileItem;
@@ -23,6 +24,7 @@ const Pic: React.FC<ObjectProp> = (props) => {
     const [width, setWidth] = useState<number>(500 / scale);
     const [prevWidth, setPrevWidth] = useState<number>(500 / scale);
     const [scaleString, setScaleString] = useState<string>("");
+
     const [{ isDragging }, drag] = useDrag({
         item: { type: tile.snap, tile: tile },
         collect: (monitor) => ({

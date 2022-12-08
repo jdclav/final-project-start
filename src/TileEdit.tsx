@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Button, Form } from "react-bootstrap";
 import { tileItem } from "./interfaces";
+
 const xIndex = 0;
 const yIndex = 1;
 
@@ -9,11 +10,21 @@ type listProps = {
     tileList: tileItem[];
     resetMiddle: () => void;
     changeTile: (tile: tileItem) => void;
+    updateSourceTile: (tile: tileItem[]) => void;
+    sourceTile: tileItem[];
 };
 
 const TileEdit: React.FC<listProps> = (props) => {
-    const { tile, tileList, resetMiddle, changeTile } = props;
+    const {
+        tile,
+        tileList,
+        resetMiddle,
+        changeTile,
+        updateSourceTile,
+        sourceTile
+    } = props;
     const [currentIndex, setCurrentIndex] = useState<number>(0);
+    const [newTag, setNewTag] = useState<string>("");
     const [snap, setSnap] = useState<string>("free");
     const [tempX, setTempX] = useState<number>(0);
     const [tempY, setTempY] = useState<number>(0);
@@ -62,7 +73,6 @@ const TileEdit: React.FC<listProps> = (props) => {
                 ...tileList[index],
                 position: [value, tileList[index].position[yIndex]]
             };
-
             changeTile(newTile);
         }
     };
@@ -117,6 +127,26 @@ const TileEdit: React.FC<listProps> = (props) => {
             changeTile(newTile);
         }
     };
+
+    const updateNewTag = (event: React.ChangeEvent<HTMLInputElement>) => {
+        setNewTag(event.target.value);
+    };
+
+    const changeTag = () => {
+        const value = newTag;
+        if (tile !== null) {
+            updateSourceTile(
+                sourceTile.map((o: tileItem): tileItem => {
+                    if (tileList[currentIndex].src === o.src) {
+                        return { ...o, tags: [...o.tags, value] };
+                    } else {
+                        return o;
+                    }
+                })
+            );
+        }
+    };
+
     const updateOrientationSnap = (facing: number) => {
         if (tile !== null) {
             const index = tileList.findIndex(
@@ -258,6 +288,13 @@ const TileEdit: React.FC<listProps> = (props) => {
                             </div>
                         </div>
                     )}
+                    <Form.Label>Tags</Form.Label>
+                    <Form.Control
+                        type="string"
+                        value={newTag}
+                        onChange={updateNewTag}
+                    />
+                    <Button onClick={changeTag}>Add Tag</Button>
                 </Form.Group>
             </div>
         </div>

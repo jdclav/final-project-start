@@ -1,5 +1,5 @@
 /* eslint-disable no-extra-parens */
-import React, { /*MouseEvent,*/ useState } from "react";
+import React, { /*MouseEvent,*/ useEffect, useState } from "react";
 
 import "./css/App.css";
 import OpenScreen from "./OpenScreen";
@@ -21,6 +21,15 @@ const App: React.FC = (): JSX.Element => {
     const updatePage = (newPage: number) => {
         setPage(newPage);
     };
+
+    useEffect(() => {
+        if (xSize < 2) {
+            setXSize(2);
+        }
+        if (ySize < 2) {
+            setYSize(2);
+        }
+    }, [xSize, ySize]);
 
     return (
         <div className="App">

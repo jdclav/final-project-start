@@ -1,4 +1,3 @@
-/* eslint-disable no-extra-parens */
 import React, { useState } from "react";
 import { Button } from "react-bootstrap";
 import DeleteBin from "./DeleteBin";
@@ -93,6 +92,7 @@ const Rightbar: React.FC<listProps> = (props) => {
                             changeTile={changeTile}
                             tileList={tileList}
                         ></Search>
+                        <p>Total tile: {tileList.length}</p>
                     </div>
                 </div>
             )}
