@@ -9,4 +9,5 @@ export interface tileItem {
     constScale: number;
     orientation: number;
     counter: number;
+
 }

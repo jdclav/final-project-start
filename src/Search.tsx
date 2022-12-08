@@ -1,24 +1,67 @@
 import React, { useState } from "react";
 import { tileItem } from "./interfaces";
 import Pic from "./Pic";
-import { Form } from "react-bootstrap";
+import { Button, Form } from "react-bootstrap";
 import "./css/Search.css";
+<<<<<<
 // import History from "./history";
+=======
+import TagModal from "./TagModal";
+
+const getTags = (tiles: tileItem[]): string[] => {
+    let output: string[] = [];
+    tiles.map((tile: tileItem) => {
+        output = [...output, ...tile.tags];
+        output = output.filter(
+            (tag: string, index: number) => output.indexOf(tag) === index
+        );
+    });
+    return output;
+};
+
+//const includesList = (a: string[], b: )
+>>>>>>
 
 type listProps = {
     updateSelectTile: (tile: tileItem) => void;
     sourceTiles: tileItem[];
+<<<<<<
     // updateCounter: (tile: tileItem) => void;
+=======
+    changeTile: (tile: tileItem) => void;
+    tileList: tileItem[];
+>>>>>>
 };
 const Search: React.FC<listProps> = (props) => {
-    const { updateSelectTile, sourceTiles } = props;
+    const { updateSelectTile, sourceTiles, changeTile, tileList } = props;
     const [search, setSearch] = useState<string>("");
+    const [show, setShow] = useState<boolean>(false);
+    const [allTags /*, setAllTags*/] = useState<string[]>(getTags(sourceTiles));
+    const [tags, setTags] = useState<string[]>([]);
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         setSearch(e.target.value);
     };
-
+    const updateShow = (showing: boolean) => setShow(showing);
+    const updateTags = (newTags: string[]) => {
+        setTags(newTags);
+    };
     return (
         <div>
+            <Button
+                className="modal_button"
+                onClick={() => {
+                    updateShow(true);
+                }}
+            >
+                Tag Filter
+            </Button>
+            <TagModal
+                show={show}
+                updateShow={updateShow}
+                allTags={allTags}
+                tags={tags}
+                updateTags={updateTags}
+            />
             <Form.Group className="search" controlId="searchbar">
                 <Form.Control
                     value={search}
@@ -30,10 +73,12 @@ const Search: React.FC<listProps> = (props) => {
             <div className="list">
                 {sourceTiles.map((sortTile: tileItem, key: number) => {
                     if (
-                        search === "" ||
-                        sortTile.name
-                            .toLowerCase()
-                            .includes(search.toLowerCase())
+                        (search === "" ||
+                            sortTile.name
+                                .toLowerCase()
+                                .includes(search.toLowerCase())) &&
+                        (tags.every((r) => sortTile.tags.indexOf(r) !== -1) ||
+                            tags.length === 0)
                     ) {
                         return (
                             <div
@@ -49,6 +94,8 @@ const Search: React.FC<listProps> = (props) => {
                                     tile={sortTile}
                                     scale={100}
                                     updateSelectTile={updateSelectTile}
+                                    changeTile={changeTile}
+                                    tileList={tileList}
                                 />
                             </div>
                         );

@@ -16,12 +16,14 @@ import { tileItem } from "./interfaces";
 import "./css/DndScreen.css";
 
 type screenProps = {
+    changeXSize: (event: React.ChangeEvent<HTMLInputElement>) => void;
+    changeYSize: (event: React.ChangeEvent<HTMLInputElement>) => void;
     xSize: number;
     ySize: number;
 };
 
 const DndScreen: React.FC<screenProps> = (props) => {
-    const { xSize, ySize } = props;
+    const { xSize, ySize, changeXSize, changeYSize } = props;
     const [tiles, setTiles] = useState<tileItem[]>([]);
     const [scale, setScale] = useState<number>(1);
     const [middleClick, setMiddleClick] = useState<boolean>(false);
@@ -33,8 +35,13 @@ const DndScreen: React.FC<screenProps> = (props) => {
         setTiles(tiles.filter((tile: tileItem): boolean => tile.id !== index));
     };
 
+<<<<<<
     const updateSourceTile = (tile: tileItem[]) => {
         setSourceTile(tile);
+=======
+    const updateSourceTile = (tiles: tileItem[]) => {
+        setSourceTile(tiles);
+>>>>>>
     };
 
     const resetMiddle = () => {
@@ -48,9 +55,22 @@ const DndScreen: React.FC<screenProps> = (props) => {
 
     const changeTile = (tile: tileItem) => {
         if (tile.id < 0) {
+            let lowestId = -1;
+            const tileCopy = [...tiles];
+            tileCopy.sort((a, b) => (a.id > b.id ? 1 : -1));
+            for (let i = 0; i < tiles.length; ++i) {
+                if (tileCopy[i].id !== i) {
+                    lowestId = i;
+                    break;
+                }
+            }
+            if (lowestId === -1) {
+                lowestId = tiles.length;
+            }
+
             setTiles((oldArray: tileItem[]) => [
                 ...oldArray,
-                { ...tile, id: oldArray.length }
+                { ...tile, id: lowestId }
             ]);
         } else {
             setTiles(
@@ -115,10 +135,16 @@ const DndScreen: React.FC<screenProps> = (props) => {
                     {/* {sourceTile.map((tile: tileItem): number => tile.counter)} */}
                     {(!middleClick && (
                         <Rightbar
-                            setSourceTiles={setSourceTile}
+                            updateSourceTile={updateSourceTile}
                             sourceTiles={sourceTile}
                             deleteTile={deleteTile}
                             updateSelectTile={updateSelectTile}
+                            changeXSize={changeXSize}
+                            changeYSize={changeYSize}
+                            xSize={xSize}
+                            ySize={ySize}
+                            changeTile={changeTile}
+                            tileList={tiles}
                         ></Rightbar>
                     )) ||
                         (middleClick && (
