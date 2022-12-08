@@ -26,6 +26,8 @@ const DndScreen: React.FC<screenProps> = (props) => {
     const [middleClick, setMiddleClick] = useState<boolean>(false);
     const [selectTile, setSelectTile] = useState<tileItem | null>(null);
     const [sourceTile, setSourceTile] = useState<tileItem[]>(tileList);
+    // const [setCounter] = useState<number | null>(selectTile.counter)
+
     const deleteTile = (index: number) => {
         setTiles(tiles.filter((tile: tileItem): boolean => tile.id !== index));
     };
@@ -37,6 +39,7 @@ const DndScreen: React.FC<screenProps> = (props) => {
     const updateSelectTile = (tile: tileItem) => {
         setSelectTile(tile);
         setMiddleClick(true);
+        // tile.counter == tile.counter + 1;
     };
 
     const changeTile = (tile: tileItem) => {

@@ -34,7 +34,11 @@ const App: React.FC = (): JSX.Element => {
                         ySize={ySize}
                     />
                 )) ||
-                (page === 2 && <DndScreen xSize={xSize} ySize={ySize} />)}
+                (page === 2 && (
+                    <div>
+                        <DndScreen xSize={xSize} ySize={ySize} />{" "}
+                    </div>
+                ))}
         </div>
     );
 };

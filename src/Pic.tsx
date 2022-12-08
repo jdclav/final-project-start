@@ -14,6 +14,7 @@ const Pic: React.FC<ObjectProp> = (props) => {
     const { tile, scale, updateSelectTile } = props;
     const [totalScale, setTotalScale] = useState<number>(100);
     const [rotation, setRotation] = useState<string>("rotate(0deg)");
+    tile.counter += 0.5;
     const [{ isDragging }, drag] = useDrag({
         item: { type: props.tile.snap, tile: props.tile },
         collect: (monitor) => ({
@@ -26,6 +27,9 @@ const Pic: React.FC<ObjectProp> = (props) => {
             updateSelectTile(tile);
         }
     };
+    // const updateNumber = (index: number) => {
+    //     setTiles(tiles.filter((tile: tileItem): boolean => tile.id !== index));
+    // };
 
     useEffect(() => {
         if (tile.id >= 0) {

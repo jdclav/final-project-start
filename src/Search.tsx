@@ -3,6 +3,7 @@ import { tileItem } from "./interfaces";
 import Pic from "./Pic";
 import { Form } from "react-bootstrap";
 import "./css/Search.css";
+// import History from "./history";
 
 type listProps = {
     updateSelectTile: (tile: tileItem) => void;
@@ -42,6 +43,7 @@ const Search: React.FC<listProps> = (props) => {
                                 }}
                             >
                                 <p>{sortTile.name}</p>
+                                {/* <p>{sortTile.counter}</p> */}
                                 <Pic
                                     tile={sortTile}
                                     scale={100}
