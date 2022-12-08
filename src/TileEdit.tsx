@@ -28,7 +28,6 @@ const TileEdit: React.FC<listProps> = (props) => {
         sourceTile
     } = props;
     const [currentIndex, setCurrentIndex] = useState<number>(0);
-    // const [newTileList] = useState<tileItem[]>(tileList);
     const [newTag, setNewTag] = useState<string>("");
     const updatePositionX = (event: React.ChangeEvent<HTMLInputElement>) => {
         if (tile !== null) {
@@ -97,28 +96,6 @@ const TileEdit: React.FC<listProps> = (props) => {
             changeTile(newTile);
         }
     };
-
-    // const updateTag = (event: React.ChangeEvent<HTMLInputElement>) => {
-    //     if (tile !== null) {
-    //         const value = event.target.value;
-    //         const index = newTileList.findIndex(
-    //             (o: tileItem): boolean => o.src === tile.src
-    //         );
-    //         const newTile: tileItem = {
-    //             ...tileList[index],
-    //             tags: [...tile.tags, value]
-    //         };
-    //         changeTag(newTile);
-    //         // setNewTileList(
-    //         //     newTileList.map((tile: tileItem) =>
-    //         //         newTile.src === tile.src
-    //         //             ? { ...tile, tags: newTile.tags }
-    //         //             : tile
-    //         //     )
-    //         // );
-    //         // changeTile(newTile);
-    //     }
-    // };
 
     const updateNewTag = (event: React.ChangeEvent<HTMLInputElement>) => {
         setNewTag(event.target.value);
