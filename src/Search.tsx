@@ -65,12 +65,12 @@ const Search: React.FC<listProps> = (props) => {
             <div className="list">
                 {sourceTiles.map((sortTile: tileItem, key: number) => {
                     if (
-                        ((search === "" ||
+                        (search === "" ||
                             sortTile.name
                                 .toLowerCase()
                                 .includes(search.toLowerCase())) &&
-                            sortTile.tags.some((r) => tags.includes(r))) ||
-                        tags.length === 0
+                        (tags.every((r) => sortTile.tags.indexOf(r) !== -1) ||
+                            tags.length === 0)
                     ) {
                         return (
                             <div
