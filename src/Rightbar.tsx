@@ -18,7 +18,7 @@ type listProps = {
 
 const Rightbar: React.FC<listProps> = (props) => {
     const { setSourceTiles, sourceTiles, deleteTile, updateSelectTile } = props;
-    const total = -tileList[35].id;
+    const total = tileList.length;
     const counter = sourceTiles[0].counter;
     return (
         <div>
@@ -48,7 +48,7 @@ const Rightbar: React.FC<listProps> = (props) => {
                     updateSelectTile={updateSelectTile}
                     sourceTiles={sourceTiles}
                 ></Search>
-                Total tail: {total}
+                Total tile: {total}
                 <p>Total Step: {counter}</p>
             </div>
         </div>

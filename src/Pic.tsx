@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import { useDrag } from "react-dnd";
 import { tileItem } from "./interfaces";
 import "./css/Button.css";
+// import tileList from "./images/tileList";
 
 type ObjectProp = {
     tile: tileItem;
@@ -14,6 +15,7 @@ const Pic: React.FC<ObjectProp> = (props) => {
     const { tile, scale, updateSelectTile } = props;
     const [totalScale, setTotalScale] = useState<number>(100);
     const [rotation, setRotation] = useState<string>("rotate(0deg)");
+    // const [tileLists] = useState<tileItem[]>(tileList);
     tile.counter += 0.5;
     const [{ isDragging }, drag] = useDrag({
         item: { type: props.tile.snap, tile: props.tile },
@@ -27,9 +29,6 @@ const Pic: React.FC<ObjectProp> = (props) => {
             updateSelectTile(tile);
         }
     };
-    // const updateNumber = (index: number) => {
-    //     setTiles(tiles.filter((tile: tileItem): boolean => tile.id !== index));
-    // };
 
     useEffect(() => {
         if (tile.id >= 0) {
