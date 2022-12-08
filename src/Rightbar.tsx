@@ -10,7 +10,7 @@ import SortName from "./SortName";
 import SortSnap from "./SortSnap";
 
 type listProps = {
-    setSourceTiles: (newTile: tileItem[]) => void;
+    updateSourceTile: (newTile: tileItem[]) => void;
     sourceTiles: tileItem[];
     deleteTile: (index: number) => void;
     updateSelectTile: (tile: tileItem) => void;
@@ -24,7 +24,7 @@ type listProps = {
 
 const Rightbar: React.FC<listProps> = (props) => {
     const {
-        setSourceTiles,
+        updateSourceTile,
         sourceTiles,
         deleteTile,
         updateSelectTile,
@@ -80,12 +80,12 @@ const Rightbar: React.FC<listProps> = (props) => {
                         <SortName
                             buttonName={"Sort by Name"}
                             listTiles={sourceTiles}
-                            updatelistTiles={setSourceTiles}
+                            updatelistTiles={updateSourceTile}
                         ></SortName>
                         <SortSnap
                             buttonName={"Sort by Snap"}
                             listTiles={sourceTiles}
-                            updatelistTiles={setSourceTiles}
+                            updatelistTiles={updateSourceTile}
                         ></SortSnap>
                         <Search
                             updateSelectTile={updateSelectTile}
