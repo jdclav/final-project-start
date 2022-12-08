@@ -28,7 +28,7 @@ type BoardProps = {
 
 const Board: React.FC<BoardProps> = (props) => {
     const { tile, changeTile, x, y, scale, updateSelectTile } = props;
-    const squares = [];
+    const squares: JSX.Element[] = [];
     const freeTiles = renderFree(tile);
     const grid = document.getElementById("board");
     const renderPiece = (
@@ -83,22 +83,18 @@ const Board: React.FC<BoardProps> = (props) => {
         accept: ItemTypes.free,
         canDrop: () => true,
         drop: (item: { type: string; tile: tileItem }, monitor) => {
-            let x;
-            let y;
+            let x: number;
+            let y: number;
             const positionDifference = monitor.getDifferenceFromInitialOffset();
             const positionCurrent = monitor.getClientOffset();
-            let offset = null;
-            if (grid !== null) {
-                offset = grid.getBoundingClientRect();
-            }
             if (
                 item.tile.position[xIndex] === sourcePosition &&
                 item.tile.position[yIndex] === sourcePosition &&
                 positionCurrent !== null &&
-                offset !== null
+                grid !== null
             ) {
-                x = positionCurrent.x - offset.x;
-                y = positionCurrent.y - offset.y;
+                x = positionCurrent.x - grid.getBoundingClientRect().x;
+                y = positionCurrent.y - grid.getBoundingClientRect().y;
             } else if (
                 positionDifference !== null &&
                 positionCurrent !== null

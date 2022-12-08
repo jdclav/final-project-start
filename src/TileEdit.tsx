@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Button, Form } from "react-bootstrap";
 import { tileItem } from "./interfaces";
-
 const xIndex = 0;
 const yIndex = 1;
 
@@ -16,6 +15,7 @@ type listProps = {
 const TileEdit: React.FC<listProps> = (props) => {
     const { tile, tileList, resetMiddle, changeTile } = props;
     const [currentIndex, setCurrentIndex] = useState<number>(0);
+
     const updatePositionX = (event: React.ChangeEvent<HTMLInputElement>) => {
         if (tile !== null) {
             let value = parseInt(event.target.value);
@@ -119,6 +119,7 @@ const TileEdit: React.FC<listProps> = (props) => {
                         onChange={updatePositionY}
                     />
                     <Form.Label>Size</Form.Label>
+
                     <Form.Control
                         type="number"
                         value={tileList[currentIndex].scale}
@@ -131,6 +132,7 @@ const TileEdit: React.FC<listProps> = (props) => {
                         onChange={updateOrientation}
                     />
                 </Form.Group>
+                <input type="range" defaultValue={50} />
             </div>
         </div>
     );
