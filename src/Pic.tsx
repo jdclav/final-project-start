@@ -17,10 +17,6 @@ const Pic: React.FC<ObjectProp> = (props) => {
     const { tile, scale, updateSelectTile, changeTile, tileList } = props;
     const [totalScale, setTotalScale] = useState<number>(100);
     const [rotation, setRotation] = useState<string>("rotate(0deg)");
-<<<<<<
-    // const [tileLists] = useState<tileItem[]>(tileList);
-    tile.counter += 0.5;
-=======
     const [windowSize, setWindowSize] = useState<number>(window.innerWidth);
     const [prevWindowSize, setPrevWindowSize] = useState<number>(
         window.innerWidth
@@ -28,7 +24,7 @@ const Pic: React.FC<ObjectProp> = (props) => {
     const [width, setWidth] = useState<number>(500 / scale);
     const [prevWidth, setPrevWidth] = useState<number>(500 / scale);
     const [scaleString, setScaleString] = useState<string>("");
->>>>>>
+
     const [{ isDragging }, drag] = useDrag({
         item: { type: tile.snap, tile: tile },
         collect: (monitor) => ({
