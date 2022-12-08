@@ -47,6 +47,7 @@ const Rightbar: React.FC<listProps> = (props) => {
                 <Search
                     updateSelectTile={updateSelectTile}
                     sourceTiles={sourceTiles}
+                    // updateCounter={updateSelectTile}
                 ></Search>
                 Total tile: {total}
                 <p>Total Step: {counter}</p>

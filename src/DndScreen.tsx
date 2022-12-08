@@ -70,21 +70,10 @@ const DndScreen: React.FC<screenProps> = (props) => {
     const totalImg = tiles.length;
 
     // const updateCounter = (tile: tileItem) => {
-    //     sourceTile.map((o: tileItem): tileItem => o.src === tile.src? {...})
-    // }
-
-    // const updateCounter = () => {
-    //     for (let i = 0; i < tiles.length; i++) {
-    //         for (let j = 0; j < sourceTile.length; j++) {
-    //             if (tiles[i].id == sourceTile[j].id) {
-    //                 const newTile = {
-    //                     ...sourceTile[j],
-    //                     counter: sourceTile[j].counter + 0.5
-    //                 };
-    //                 return newTile;
-    //             }
-    //         }
-    //     }
+    //     sourceTile.map(
+    //         (o: tileItem): tileItem =>
+    //             o.src === tile.src ? { ...o, counter: o.counter + 1 } : o
+    //     );
     // };
 
     return (
@@ -122,7 +111,7 @@ const DndScreen: React.FC<screenProps> = (props) => {
                     </TransformWrapper>
                 </div>
                 <div className="rightbar">
-                    New tile :{sourceTile[0].counter}
+                    {/* New tile :{updateCounter} */}
                     {/* {sourceTile.map((tile: tileItem): number => tile.counter)} */}
                     {(!middleClick && (
                         <Rightbar

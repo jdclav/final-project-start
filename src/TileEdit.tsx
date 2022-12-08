@@ -111,7 +111,7 @@ const TileEdit: React.FC<listProps> = (props) => {
 
             const newTile: tileItem = {
                 ...tileList[index],
-                tags: [...sourceTile[index].tags, value]
+                tags: [...tileList[index].tags, value]
             };
             sourceTile.map(
                 (o: tileItem): tileItem => (o.src === newTile.src ? newTile : o)

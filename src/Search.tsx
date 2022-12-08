@@ -8,6 +8,7 @@ import "./css/Search.css";
 type listProps = {
     updateSelectTile: (tile: tileItem) => void;
     sourceTiles: tileItem[];
+    // updateCounter: (tile: tileItem) => void;
 };
 const Search: React.FC<listProps> = (props) => {
     const { updateSelectTile, sourceTiles } = props;
