@@ -32,6 +32,10 @@ const DndScreen: React.FC<screenProps> = (props) => {
         setTiles(tiles.filter((tile: tileItem): boolean => tile.id !== index));
     };
 
+    const updateSourceTile = (tiles: tileItem[]) => {
+        setSourceTile(tiles);
+    };
+
     const resetMiddle = () => {
         setMiddleClick(false);
     };
@@ -95,7 +99,7 @@ const DndScreen: React.FC<screenProps> = (props) => {
                 <div className="rightbar">
                     {(!middleClick && (
                         <Rightbar
-                            setSourceTiles={setSourceTile}
+                            updateSourceTile={updateSourceTile}
                             sourceTiles={sourceTile}
                             deleteTile={deleteTile}
                             updateSelectTile={updateSelectTile}
