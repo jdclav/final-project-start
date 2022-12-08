@@ -1,11 +1,8 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { tileItem } from "./interfaces";
 import Pic from "./Pic";
 import { Button, Form } from "react-bootstrap";
 import "./css/Search.css";
-<<<<<<
-// import History from "./history";
-=======
 import TagModal from "./TagModal";
 
 const getTags = (tiles: tileItem[]): string[] => {
@@ -19,24 +16,17 @@ const getTags = (tiles: tileItem[]): string[] => {
     return output;
 };
 
-//const includesList = (a: string[], b: )
->>>>>>
-
 type listProps = {
     updateSelectTile: (tile: tileItem) => void;
     sourceTiles: tileItem[];
-<<<<<<
-    // updateCounter: (tile: tileItem) => void;
-=======
     changeTile: (tile: tileItem) => void;
     tileList: tileItem[];
->>>>>>
 };
 const Search: React.FC<listProps> = (props) => {
     const { updateSelectTile, sourceTiles, changeTile, tileList } = props;
     const [search, setSearch] = useState<string>("");
     const [show, setShow] = useState<boolean>(false);
-    const [allTags /*, setAllTags*/] = useState<string[]>(getTags(sourceTiles));
+    const [allTags, setAllTags] = useState<string[]>(getTags(sourceTiles));
     const [tags, setTags] = useState<string[]>([]);
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         setSearch(e.target.value);
@@ -45,6 +35,9 @@ const Search: React.FC<listProps> = (props) => {
     const updateTags = (newTags: string[]) => {
         setTags(newTags);
     };
+    useEffect(() => {
+        setAllTags(getTags(sourceTiles));
+    }, [sourceTiles]);
     return (
         <div>
             <Button
@@ -89,7 +82,6 @@ const Search: React.FC<listProps> = (props) => {
                                 }}
                             >
                                 <p>{sortTile.name}</p>
-                                {/* <p>{sortTile.counter}</p> */}
                                 <Pic
                                     tile={sortTile}
                                     scale={100}
