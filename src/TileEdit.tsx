@@ -9,17 +9,49 @@ type listProps = {
     tileList: tileItem[];
     resetMiddle: () => void;
     changeTile: (tile: tileItem) => void;
-    //deleteTile: (index: number) => void;
 };
 
 const TileEdit: React.FC<listProps> = (props) => {
     const { tile, tileList, resetMiddle, changeTile } = props;
     const [currentIndex, setCurrentIndex] = useState<number>(0);
     const [snap, setSnap] = useState<string>("free");
+    const [tempX, setTempX] = useState<number>(0);
+    const [tempY, setTempY] = useState<number>(0);
+    const [tempOrientation, setTempOrientation] = useState<number>(0);
 
-    const updatePositionX = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const updateTempX = (event: React.ChangeEvent<HTMLInputElement>) => {
         if (tile !== null) {
             let value = parseInt(event.target.value);
+            if (isNaN(value)) {
+                value = 0;
+            }
+            setTempX(value);
+        }
+    };
+    const updateTempY = (event: React.ChangeEvent<HTMLInputElement>) => {
+        if (tile !== null) {
+            let value = parseInt(event.target.value);
+            if (isNaN(value)) {
+                value = 0;
+            }
+            setTempY(value);
+        }
+    };
+    const updateTempOrientation = (
+        event: React.ChangeEvent<HTMLInputElement>
+    ) => {
+        if (tile !== null) {
+            let value = parseInt(event.target.value);
+            if (isNaN(value)) {
+                value = 0;
+            }
+            setTempOrientation(value);
+        }
+    };
+
+    const updatePositionX = () => {
+        if (tile !== null) {
+            let value = tempX;
             if (isNaN(value)) {
                 value = 0;
             }
@@ -34,9 +66,9 @@ const TileEdit: React.FC<listProps> = (props) => {
             changeTile(newTile);
         }
     };
-    const updatePositionY = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const updatePositionY = () => {
         if (tile !== null) {
-            let value = parseInt(event.target.value);
+            let value = tempY;
             if (isNaN(value)) {
                 value = 0;
             }
@@ -68,9 +100,9 @@ const TileEdit: React.FC<listProps> = (props) => {
             changeTile(newTile);
         }
     };
-    const updateOrientation = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const updateOrientation = () => {
         if (tile !== null) {
-            let value = parseInt(event.target.value);
+            let value = tempOrientation;
             if (isNaN(value)) {
                 value = 0;
             }
@@ -120,15 +152,23 @@ const TileEdit: React.FC<listProps> = (props) => {
                 <Button className="resetMiddle" onClick={resetMiddle}>
                     Done
                 </Button>
+                <div>
+                    <p>X: {tileList[currentIndex].position[xIndex]}</p>
+                    <p>Y: {tileList[currentIndex].position[yIndex]}</p>
+                    {snap === "free" && (
+                        <p>Size: {tileList[currentIndex].scale}</p>
+                    )}
+                    <p>Orientation: {tileList[currentIndex].orientation}</p>
+                </div>
                 <Form.Group>
                     <Form.Label>X Coordinate</Form.Label>
                     <Form.Control
                         type="number"
-                        value={tileList[currentIndex].position[xIndex]}
-                        onChange={updatePositionX}
+                        value={tempX}
+                        onChange={updateTempX}
                     />
                     <div>
-                        <Button className="setX" onClick={resetMiddle}>
+                        <Button className="setX" onClick={updatePositionX}>
                             Enter
                         </Button>
                     </div>
@@ -136,11 +176,11 @@ const TileEdit: React.FC<listProps> = (props) => {
                     <Form.Label>Y Coordinate</Form.Label>
                     <Form.Control
                         type="number"
-                        value={tileList[currentIndex].position[yIndex]}
-                        onChange={updatePositionY}
+                        value={tempY}
+                        onChange={updateTempY}
                     />
                     <div>
-                        <Button className="setY" onClick={resetMiddle}>
+                        <Button className="setY" onClick={updatePositionY}>
                             Enter
                         </Button>
                     </div>
@@ -165,12 +205,12 @@ const TileEdit: React.FC<listProps> = (props) => {
                         <div>
                             <Form.Control
                                 type="number"
-                                value={tileList[currentIndex].orientation}
-                                onChange={updateOrientation}
+                                value={tempOrientation}
+                                onChange={updateTempOrientation}
                             />
                             <Button
                                 className="set_orientation"
-                                onClick={resetMiddle}
+                                onClick={updateOrientation}
                             >
                                 Enter
                             </Button>
