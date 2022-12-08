@@ -8,6 +8,8 @@ import { tileItem } from "./interfaces";
 import Search from "./Search";
 import SortName from "./SortName";
 import SortSnap from "./SortSnap";
+import tileList from "./images/tileList";
+// import History from "./history";
 
 type listProps = {
     updateSourceTile: (newTile: tileItem[]) => void;
@@ -23,6 +25,43 @@ type listProps = {
 };
 
 const Rightbar: React.FC<listProps> = (props) => {
+<<<<<<
+    const { setSourceTiles, sourceTiles, deleteTile, updateSelectTile } = props;
+    const total = tileList.length;
+    const counter = sourceTiles[0].counter;
+    return (
+        <div>
+            <ImageDownload />
+            <div
+                style={{
+                    display: "inline-block",
+                    width: "100%",
+                    height: "10vw"
+                }}
+            >
+                <DeleteBin deleteTile={deleteTile} />
+            </div>
+            <div>
+                <SortName
+                    buttonName={"Sort by Name"}
+                    listTiles={sourceTiles}
+                    updatelistTiles={setSourceTiles}
+                ></SortName>
+                <SortSnap
+                    buttonName={"Sort by Snap"}
+                    listTiles={sourceTiles}
+                    updatelistTiles={setSourceTiles}
+                ></SortSnap>
+                {/* <History tile={currentTile}></History> */}
+                <Search
+                    updateSelectTile={updateSelectTile}
+                    sourceTiles={sourceTiles}
+                    // updateCounter={updateSelectTile}
+                ></Search>
+                Total tile: {total}
+                <p>Total Step: {counter}</p>
+            </div>
+=======
     const {
         updateSourceTile,
         sourceTiles,
@@ -96,6 +135,7 @@ const Rightbar: React.FC<listProps> = (props) => {
                     </div>
                 </div>
             )}
+>>>>>>
         </div>
     );
 };

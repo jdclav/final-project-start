@@ -8,5 +8,6 @@ export interface tileItem {
     scale: number;
     constScale: number;
     orientation: number;
-    offset: number;
+    counter: number;
+
 }
