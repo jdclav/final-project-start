@@ -1,11 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Button, Form } from "react-bootstrap";
 import { tileItem } from "./interfaces";
-<<<<<<
-// import tileList from "./images/tileList";
 
-=======
->>>>>>
 const xIndex = 0;
 const yIndex = 1;
 
@@ -14,14 +10,8 @@ type listProps = {
     tileList: tileItem[];
     resetMiddle: () => void;
     changeTile: (tile: tileItem) => void;
-<<<<<<
-    // changeTag: (tile: tileItem) => void;
     updateSourceTile: (tile: tileItem[]) => void;
     sourceTile: tileItem[];
-    //deleteTile: (index: number) => void;
-    // updateTag: (tile: tileItem) => void;
-=======
->>>>>>
 };
 
 const TileEdit: React.FC<listProps> = (props) => {
@@ -34,10 +24,7 @@ const TileEdit: React.FC<listProps> = (props) => {
         sourceTile
     } = props;
     const [currentIndex, setCurrentIndex] = useState<number>(0);
-<<<<<<
     const [newTag, setNewTag] = useState<string>("");
-    const updatePositionX = (event: React.ChangeEvent<HTMLInputElement>) => {
-=======
     const [snap, setSnap] = useState<string>("free");
     const [tempX, setTempX] = useState<number>(0);
     const [tempY, setTempY] = useState<number>(0);
@@ -64,7 +51,6 @@ const TileEdit: React.FC<listProps> = (props) => {
     const updateTempOrientation = (
         event: React.ChangeEvent<HTMLInputElement>
     ) => {
->>>>>>
         if (tile !== null) {
             let value = parseInt(event.target.value);
             if (isNaN(value)) {
@@ -141,7 +127,6 @@ const TileEdit: React.FC<listProps> = (props) => {
             changeTile(newTile);
         }
     };
-<<<<<<
 
     const updateNewTag = (event: React.ChangeEvent<HTMLInputElement>) => {
         setNewTag(event.target.value);
@@ -149,24 +134,19 @@ const TileEdit: React.FC<listProps> = (props) => {
 
     const changeTag = () => {
         const value = newTag;
-        // const value = { updateNewTag };
         if (tile !== null) {
-            const index = sourceTile.findIndex(
-                (o: tileItem): boolean => o.src === tile.src
-            );
-
-            const newTile: tileItem = {
-                ...tileList[index],
-                tags: [...tileList[index].tags, value]
-            };
-            sourceTile.map(
-                (o: tileItem): tileItem => (o.src === newTile.src ? newTile : o)
+            updateSourceTile(
+                sourceTile.map((o: tileItem): tileItem => {
+                    if (tileList[currentIndex].src === o.src) {
+                        return { ...o, tags: [...o.tags, value] };
+                    } else {
+                        return o;
+                    }
+                })
             );
         }
-        updateSourceTile(sourceTile);
     };
 
-=======
     const updateOrientationSnap = (facing: number) => {
         if (tile !== null) {
             const index = tileList.findIndex(
@@ -180,7 +160,6 @@ const TileEdit: React.FC<listProps> = (props) => {
             changeTile(newTile);
         }
     };
->>>>>>
     useEffect(() => {
         if (tile !== null) {
             const test = tile.id;
@@ -252,20 +231,6 @@ const TileEdit: React.FC<listProps> = (props) => {
                     )}
 
                     <Form.Label>Orientation</Form.Label>
-<<<<<<
-                    <Form.Control
-                        type="number"
-                        value={tileList[currentIndex].orientation}
-                        onChange={updateOrientation}
-                    />
-                    <Form.Label>Tags</Form.Label>
-                    <Form.Control
-                        type="string"
-                        value={newTag}
-                        onChange={updateNewTag}
-                    />
-                    <Button onClick={changeTag}>add Tags</Button>
-=======
                     {snap === "free" && (
                         <div>
                             <Form.Control
@@ -323,7 +288,13 @@ const TileEdit: React.FC<listProps> = (props) => {
                             </div>
                         </div>
                     )}
->>>>>>
+                    <Form.Label>Tags</Form.Label>
+                    <Form.Control
+                        type="string"
+                        value={newTag}
+                        onChange={updateNewTag}
+                    />
+                    <Button onClick={changeTag}>Add Tag</Button>
                 </Form.Group>
             </div>
         </div>

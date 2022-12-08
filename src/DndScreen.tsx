@@ -35,13 +35,8 @@ const DndScreen: React.FC<screenProps> = (props) => {
         setTiles(tiles.filter((tile: tileItem): boolean => tile.id !== index));
     };
 
-<<<<<<
     const updateSourceTile = (tile: tileItem[]) => {
         setSourceTile(tile);
-=======
-    const updateSourceTile = (tiles: tileItem[]) => {
-        setSourceTile(tiles);
->>>>>>
     };
 
     const resetMiddle = () => {
