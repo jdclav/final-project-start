@@ -45,6 +45,20 @@ const Search: React.FC<listProps> = (props) => {
     useEffect(() => {
         setAllTags(getTags(sourceTiles));
     }, [sourceTiles]);
+
+    const imageMouseOutHandler = (
+        event: React.MouseEvent<HTMLInputElement>
+    ) => {
+        const image: HTMLInputElement = event.currentTarget;
+        image.style.backgroundColor = "white";
+    };
+    const imageMouseOverHandler = (
+        event: React.MouseEvent<HTMLInputElement>
+    ) => {
+        const image: HTMLInputElement = event.currentTarget;
+        image.style.backgroundColor = "aqua";
+    };
+
     return (
         <div>
             <Button
@@ -83,6 +97,8 @@ const Search: React.FC<listProps> = (props) => {
                     ) {
                         return (
                             <div
+                                onMouseOver={imageMouseOverHandler}
+                                onMouseOut={imageMouseOutHandler}
                                 key={key}
                                 style={{
                                     display: "inline-block",
@@ -90,7 +106,6 @@ const Search: React.FC<listProps> = (props) => {
                                 }}
                             >
                                 <p>{sortTile.name}</p>
-                                {/* <p>{sortTile.counter}</p> */}
                                 <Pic
                                     tile={sortTile}
                                     scale={100}
