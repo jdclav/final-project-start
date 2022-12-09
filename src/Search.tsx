@@ -21,16 +21,9 @@ type listProps = {
     sourceTiles: tileItem[];
     changeTile: (tile: tileItem) => void;
     tileList: tileItem[];
-    updateCounter: (tile: tileItem) => void;
 };
 const Search: React.FC<listProps> = (props) => {
-    const {
-        updateSelectTile,
-        sourceTiles,
-        changeTile,
-        tileList,
-        updateCounter
-    } = props;
+    const { updateSelectTile, sourceTiles, changeTile, tileList } = props;
     const [search, setSearch] = useState<string>("");
     const [show, setShow] = useState<boolean>(false);
     const [allTags, setAllTags] = useState<string[]>(getTags(sourceTiles));
@@ -86,7 +79,6 @@ const Search: React.FC<listProps> = (props) => {
             </Form.Group>
             <div className="list">
                 {sourceTiles.map((sortTile: tileItem, key: number) => {
-                    updateCounter(sortTile);
                     if (
                         (search === "" ||
                             sortTile.name
@@ -105,7 +97,6 @@ const Search: React.FC<listProps> = (props) => {
                                     width: "50%"
                                 }}
                             >
-                                <p>{sortTile.name}</p>
                                 <Pic
                                     tile={sortTile}
                                     scale={100}
@@ -113,6 +104,8 @@ const Search: React.FC<listProps> = (props) => {
                                     changeTile={changeTile}
                                     tileList={tileList}
                                 />
+                                <p>{sortTile.name}</p>
+                                <p>{sortTile.counter}</p>
                             </div>
                         );
                     }

@@ -1,5 +1,4 @@
-/* eslint-disable no-extra-parens */
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Board from ".//Board";
 import {
     TransformWrapper,
@@ -14,7 +13,7 @@ import TileEdit from "./TileEdit";
 import tileList from "./images/tileList";
 import { tileItem } from "./interfaces";
 import "./css/DndScreen.css";
-import CountTimer from "./Timer";
+import CountTimer from "./CountTimer";
 
 type screenProps = {
     changeXSize: (event: React.ChangeEvent<HTMLInputElement>) => void;
@@ -83,25 +82,22 @@ const DndScreen: React.FC<screenProps> = (props) => {
 
     const totalImg = tiles.length;
 
-    const updateCounter = (tile: tileItem) => {
-        if (oldTile.length > tiles.length || oldTile.length === tiles.length) {
-            return sourceTile;
-        } else {
-            const index = tileList.findIndex(
-                (o: tileItem): boolean => o.id === tile.id
-            );
+    const updateCounter = () => {
+        if (oldTile.length < tiles.length) {
             updateSourceTile(
                 sourceTile.map((o: tileItem): tileItem => {
-                    if (tileList[index].src === o.src) {
+                    if (tiles[tiles.length - 1].src === o.src) {
                         return { ...o, counter: o.counter + 1 };
                     } else {
                         return o;
                     }
                 })
             );
-            setOldTile([...oldTile, tiles[tiles.length - 1]]);
         }
+        setOldTile([...tiles]);
     };
+
+    useEffect(updateCounter, [tiles]);
 
     return (
         <div className="dndpage">
@@ -153,7 +149,6 @@ const DndScreen: React.FC<screenProps> = (props) => {
                             ySize={ySize}
                             changeTile={changeTile}
                             tileList={tiles}
-                            updateCounter={updateCounter}
                         ></Rightbar>
                     )) ||
                         (middleClick && (

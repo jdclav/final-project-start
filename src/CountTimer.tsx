@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 interface Count {
     hours: number;
@@ -6,7 +6,8 @@ interface Count {
     seconds: number;
 }
 
-const CountTimer = ({ hours = 0, minutes = 0, seconds = 0 }: Count) => {
+const CountTimer: React.FC<Count> = (props) => {
+    const { hours, minutes, seconds } = props;
     const [time, setTime] = React.useState<Count>({
         hours,
         minutes,
@@ -31,7 +32,7 @@ const CountTimer = ({ hours = 0, minutes = 0, seconds = 0 }: Count) => {
         }
     };
 
-    React.useEffect(() => {
+    useEffect(() => {
         const timerId = setInterval(() => Time(), 1000);
         return () => clearInterval(timerId);
     });
