@@ -45,6 +45,20 @@ const Search: React.FC<listProps> = (props) => {
     useEffect(() => {
         setAllTags(getTags(sourceTiles));
     }, [sourceTiles]);
+
+    const imageMouseOutHandler = (
+        event: React.MouseEvent<HTMLInputElement>
+    ) => {
+        const input: HTMLInputElement = event.currentTarget;
+        input.style.backgroundColor = "white";
+    };
+    const imageMouseOverHandler = (
+        event: React.MouseEvent<HTMLInputElement>
+    ) => {
+        const input: HTMLInputElement = event.currentTarget;
+        input.style.backgroundColor = "aqua";
+    };
+
     return (
         <div>
             <Button
@@ -83,6 +97,8 @@ const Search: React.FC<listProps> = (props) => {
                     ) {
                         return (
                             <div
+                                onMouseOver={imageMouseOverHandler}
+                                onMouseOut={imageMouseOutHandler}
                                 key={key}
                                 style={{
                                     display: "inline-block",
