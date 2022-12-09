@@ -142,8 +142,6 @@ const DndScreen: React.FC<screenProps> = (props) => {
                     </TransformWrapper>
                 </div>
                 <div className="rightbar">
-                    {/* New tile :{updateCounter} */}
-                    {/* {sourceTile.map((tile: tileItem): number => tile.counter)} */}
                     {(!middleClick && (
                         <Rightbar
                             updateSourceTile={updateSourceTile}
