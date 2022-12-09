@@ -5,6 +5,7 @@ import GridEdit from "./GridEdit";
 import ImageDownload from "./ImageDownload";
 import { tileItem } from "./interfaces";
 import Search from "./Search";
+import SortCounter from "./SortCounter";
 import SortName from "./SortName";
 import SortSnap from "./SortSnap";
 
@@ -19,7 +20,6 @@ type listProps = {
     ySize: number;
     changeTile: (tile: tileItem) => void;
     tileList: tileItem[];
-    updateCounter: (tile: tileItem) => void;
 };
 
 const Rightbar: React.FC<listProps> = (props) => {
@@ -33,8 +33,7 @@ const Rightbar: React.FC<listProps> = (props) => {
         xSize,
         ySize,
         changeTile,
-        tileList,
-        updateCounter
+        tileList
     } = props;
     const total = sourceTiles.length;
     const [gridEdit, setGridEdit] = useState<boolean>(false);
@@ -89,12 +88,16 @@ const Rightbar: React.FC<listProps> = (props) => {
                             listTiles={sourceTiles}
                             updatelistTiles={updateSourceTile}
                         ></SortSnap>
+                        <SortCounter
+                            buttonName={"Sort by Counter"}
+                            listTiles={sourceTiles}
+                            updatelistTiles={updateSourceTile}
+                        ></SortCounter>
                         <Search
                             updateSelectTile={updateSelectTile}
                             sourceTiles={sourceTiles}
                             changeTile={changeTile}
                             tileList={tileList}
-                            updateCounter={updateCounter}
                         ></Search>
                         <p>Total tile: {total}</p>
                     </div>
