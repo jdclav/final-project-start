@@ -106,7 +106,6 @@ const Search: React.FC<listProps> = (props) => {
                                 }}
                             >
                                 <p>{sortTile.name}</p>
-                                {/* <p>{sortTile.counter}</p> */}
                                 <Pic
                                     tile={sortTile}
                                     scale={100}
