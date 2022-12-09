@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/final-project-start/static/css/main.c9a55c16.css",
-    "main.js": "/final-project-start/static/js/main.763f94c6.js",
+    "main.css": "/final-project-start/static/css/main.105e3934.css",
+    "main.js": "/final-project-start/static/js/main.3739fbd8.js",
     "static/js/787.4ef7427d.chunk.js": "/final-project-start/static/js/787.4ef7427d.chunk.js",
     "static/media/stone.jpg": "/final-project-start/static/media/stone.cbca09a9c6116b6fa95e.jpg",
     "static/media/hugeStone.jpg": "/final-project-start/static/media/hugeStone.dc03fd870e1dc4f1dc26.jpg",
@@ -41,12 +41,12 @@
     "static/media/chopsticks.jpg": "/final-project-start/static/media/chopsticks.8a032f6af22537642e35.jpg",
     "static/media/chair.jpg": "/final-project-start/static/media/chair.2eef77661cf7429649ef.jpg",
     "index.html": "/final-project-start/index.html",
-    "main.c9a55c16.css.map": "/final-project-start/static/css/main.c9a55c16.css.map",
-    "main.763f94c6.js.map": "/final-project-start/static/js/main.763f94c6.js.map",
+    "main.105e3934.css.map": "/final-project-start/static/css/main.105e3934.css.map",
+    "main.3739fbd8.js.map": "/final-project-start/static/js/main.3739fbd8.js.map",
     "787.4ef7427d.chunk.js.map": "/final-project-start/static/js/787.4ef7427d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.c9a55c16.css",
-    "static/js/main.763f94c6.js"
+    "static/css/main.105e3934.css",
+    "static/js/main.3739fbd8.js"
   ]
 }
