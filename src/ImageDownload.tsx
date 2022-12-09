@@ -2,7 +2,6 @@ import React from "react";
 import html2canvas from "html2canvas";
 import { saveAs } from "file-saver";
 import { Button } from "react-bootstrap";
-import CountTimer from "./Timer";
 
 const ImageDownload = () => {
     const printScreen = () => {
@@ -28,7 +27,6 @@ const ImageDownload = () => {
             >
                 Save Map
             </Button>
-            <CountTimer hours={0} minutes={0} seconds={0} />
         </div>
     );
 };

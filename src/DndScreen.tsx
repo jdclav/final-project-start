@@ -14,6 +14,7 @@ import TileEdit from "./TileEdit";
 import tileList from "./images/tileList";
 import { tileItem } from "./interfaces";
 import "./css/DndScreen.css";
+import CountTimer from "./Timer";
 
 type screenProps = {
     changeXSize: (event: React.ChangeEvent<HTMLInputElement>) => void;
@@ -29,7 +30,7 @@ const DndScreen: React.FC<screenProps> = (props) => {
     const [middleClick, setMiddleClick] = useState<boolean>(false);
     const [selectTile, setSelectTile] = useState<tileItem | null>(null);
     const [sourceTile, setSourceTile] = useState<tileItem[]>(tileList);
-    // const [setCounter] = useState<number | null>(selectTile.counter)
+    const [oldTile, setOldTile] = useState<tileItem[]>([]);
 
     const deleteTile = (index: number) => {
         setTiles(tiles.filter((tile: tileItem): boolean => tile.id !== index));
@@ -80,16 +81,28 @@ const DndScreen: React.FC<screenProps> = (props) => {
         }
     };
 
-    // const updateCounter = (tile: tileItem) => {};
-
     const totalImg = tiles.length;
 
-    // const updateCounter = (tile: tileItem) => {
-    //     sourceTile.map(
-    //         (o: tileItem): tileItem =>
-    //             o.src === tile.src ? { ...o, counter: o.counter + 1 } : o
-    //     );
-    // };
+    const updateCounter = (tile: tileItem) => {
+        if (oldTile.length > tiles.length || oldTile.length === tiles.length) {
+            return sourceTile;
+        } else {
+            // setOldTile(sourceTile.filter((o: tileItem) => o.src === tile.src));
+            const index = tileList.findIndex(
+                (o: tileItem): boolean => o.id === tile.id
+            );
+            updateSourceTile(
+                sourceTile.map((o: tileItem): tileItem => {
+                    if (tileList[index].src === o.src) {
+                        return { ...o, counter: o.counter + 1 };
+                    } else {
+                        return o;
+                    }
+                })
+            );
+            setOldTile([...oldTile, tiles[tiles.length - 1]]);
+        }
+    };
 
     return (
         <div className="dndpage">
@@ -103,6 +116,9 @@ const DndScreen: React.FC<screenProps> = (props) => {
                         }
                     >
                         <div className="totalImg">Total Drop: {totalImg}</div>
+                        <div>
+                            <CountTimer hours={0} minutes={0} seconds={0} />
+                        </div>
                         <TransformComponent>
                             <div
                                 className="grid"
@@ -140,6 +156,7 @@ const DndScreen: React.FC<screenProps> = (props) => {
                             ySize={ySize}
                             changeTile={changeTile}
                             tileList={tiles}
+                            updateCounter={updateCounter}
                         ></Rightbar>
                     )) ||
                         (middleClick && (
