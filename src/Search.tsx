@@ -49,14 +49,14 @@ const Search: React.FC<listProps> = (props) => {
     const imageMouseOutHandler = (
         event: React.MouseEvent<HTMLInputElement>
     ) => {
-        const input: HTMLInputElement = event.currentTarget;
-        input.style.backgroundColor = "white";
+        const image: HTMLInputElement = event.currentTarget;
+        image.style.backgroundColor = "white";
     };
     const imageMouseOverHandler = (
         event: React.MouseEvent<HTMLInputElement>
     ) => {
-        const input: HTMLInputElement = event.currentTarget;
-        input.style.backgroundColor = "aqua";
+        const image: HTMLInputElement = event.currentTarget;
+        image.style.backgroundColor = "aqua";
     };
 
     return (
