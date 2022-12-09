@@ -87,7 +87,6 @@ const DndScreen: React.FC<screenProps> = (props) => {
         if (oldTile.length > tiles.length || oldTile.length === tiles.length) {
             return sourceTile;
         } else {
-            // setOldTile(sourceTile.filter((o: tileItem) => o.src === tile.src));
             const index = tileList.findIndex(
                 (o: tileItem): boolean => o.id === tile.id
             );
